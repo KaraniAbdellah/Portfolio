@@ -1,0 +1,3 @@
+// find a colors
+// find features
+// see this man: https://merouanezouaid.github.io/kaitodev/#about
