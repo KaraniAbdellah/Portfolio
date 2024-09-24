@@ -1,3 +1,30 @@
-// find a colors
-// find features
-// see this man: https://merouanezouaid.github.io/kaitodev/#about
+// see project of text typing animation ==> project 31
+// see project of https://www.youtube.com/watch?v=41G4JS5pJzs ==> project 32
+
+/////////////////////////////////////////////////////////////////////
+
+// choose a structure of your project
+/*
+    introdution [social links] [get in touchs]
+    About me [image & skills]
+    Experience []
+    Projects [icons for folder & git & see projects]
+    Resume [Open Resume Button]
+*/
+Inspering From: https://elazizi.com/
+/*
+    Dark Mode
+    Header With Shadow [line bellow each link word]
+    Use Imogies
+    Footer [Copyright © 2024| All rights reserved. && SomeLinks]
+*/
+
+/////////////////////////////////////////////////////////////////////
+
+// find a colors [rgb(33 39 55) & #64ffda]
+// see this man: https://merouanezouaid.github.io/kaitodev/#about && https://elazizi.com/
+
+
+
+
+
