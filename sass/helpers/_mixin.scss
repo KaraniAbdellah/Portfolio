@@ -1,4 +1,4 @@
-@use "sass/helpers/var" as *;
+@use "../helpers/var" as *;
 
 @mixin flex_center {
     display: flex;

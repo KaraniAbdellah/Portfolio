@@ -1,0 +1,39 @@
+// Import Mixins, Colors and Global Roles
+@use "../helpers/global_roles" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/var" as *;
+
+
+.content {
+    padding: 20px;
+}
+
+/* Start Page */
+.intro {
+    height: 100vh;
+}
+/* End Page */
+/* Start About_Me */
+.about_me {
+    height: 100vh;
+}
+/* End About_Me */
+/* Start Experience */
+.experience {
+    height: 60vh;
+}
+/* End Experience */
+/* Start Projects */
+.projects {
+    height: 60vh;
+}
+/* End Projects */
+/* Start Resume */
+.resume {
+    height: 40vh;
+}
+/* End Resume */
+
+
+
+
