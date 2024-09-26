@@ -48,5 +48,10 @@
 }
 
 
+@mixin blur_color {
+    background-color: rgb(255 255 255 / 0%);
+    backdrop-filter: blur(10px);
+}
+
 
 

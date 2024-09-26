@@ -5,12 +5,147 @@
 
 
 .content {
-    padding: 20px;
+    // padding: 20px;
+    // background-color: $backgroung_color;
 }
 
 /* Start Page */
 .intro {
     height: 100vh;
+    header {
+        height: 80px;
+        @include flex_between;
+        font-weight: 700;
+        padding: 20px;
+        margin-bottom: 20px;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        @include blur_color;
+        transform: translateX(-50%);
+        width: 80%;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+        .name {
+            font-size: 30px;
+        }
+        .nav-links {
+            @include flex_between;
+            a {
+                color: inherit;
+                margin-right: 15px;
+                transition: $transition;
+            }
+            a:hover {
+                color: $main_color;
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        height: 80vh;
+        header {
+            width: 100%;
+            left: 0;
+            transform: translateX(0);
+            .nav-links {
+                display: none !important;
+            }
+            .nav-links.open {
+                display: flex !important;
+                flex-direction: column;
+                position: absolute;
+                right: 0;
+                width: 100%;
+                top: 80px;
+                padding: 10px;
+                font-size: 20px;
+                @include blur_color;
+                a:not(:last-child) {
+                    margin-bottom: 20px;
+                    margin-right: 0;
+                }
+            }
+            .navbar {
+                display: block !important;
+                font-size: 30px;
+                cursor: pointer;
+            }
+        }
+        .main_info {
+            margin-top: 120px !important;
+            text-align: center;
+            line-height: 1.9 !important;
+
+            button {
+                margin: auto;
+            }
+        }
+        
+    }
+    .main_info {
+        height: calc(100vh - 100px);
+        margin-top: 150px;
+        font-weight: 700;
+        line-height: 2;
+        > p {
+            font-size: 70px;
+            font-weight: inherit;
+            span {
+                color: $main_color;
+            }
+        }
+        .info {
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .links {
+            @include flex_between;
+            margin: 20px 0 30px;
+            > p {
+                font-size: 20px;
+            }
+            .social-icons {
+                @include flex_between;
+                a {
+                    &:not(:last-child) {
+                    margin-right: 15px;
+                    }
+                    color: inherit;
+                    transition: $transition;
+                }
+                a:hover {
+                    color: $main_color;
+                }
+            }
+        }
+        .info, .links {
+            width: 600px;
+        }
+        .get_in_touch {
+            border: 1px solid $main_color;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-weight: inherit;
+            background-color: transparent;
+            transition: $transition;
+            &:hover {
+                background-color: #ffffff1f;
+            }
+            a, i {
+                color: $main_color;
+            }
+            i {
+                margin-right: 5px;
+            }
+        }
+        @media (max-width: 992px) {
+            > p {
+                font-size: 40px;
+            }
+            .info, .links {
+                width: 100%;
+            }
+        }
+    }
 }
 /* End Page */
 /* Start About_Me */

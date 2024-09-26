@@ -6,6 +6,7 @@
 
 body {
     font-family: "Press Start 2P", system-ui;
+    background-color: #0a192f;
 }
 
 button {
@@ -22,10 +23,12 @@ input {
 
 a {
     text-decoration: none;
+    display: inline-block;
+    color: black;
 }
 
 .hidden {
-    display: none !important; 
+    display: none !important;
 }
 
 span {
@@ -36,9 +39,16 @@ i {
     display: block;
 }
 
+.container {
+    margin: 0 140px;
+    @media (max-width: 767px) {
+        margin: 0 35px;
+    }
+}
 
-
-
+.white {
+    color: white;
+}
 
 
 
