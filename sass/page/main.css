@@ -28,6 +28,10 @@ a {
   color: black;
 }
 
+ul {
+  list-style: none;
+}
+
 /* end global roles */
 /* start helper classes */
 .hidden {
@@ -69,18 +73,23 @@ i {
 }
 
 .title {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 700;
   color: #ccd6f6;
   position: relative;
-  margin: 20px 0;
+  margin: 50px 0;
   z-index: 1;
 }
 .title span {
   background-color: #0a192f;
-  width: 200px;
+  width: 250px;
 }
 
+@media (max-width: 767px) {
+  .title {
+    font-size: 32px;
+  }
+}
 @media (min-width: 767px) {
   .title::after {
     content: "";
@@ -188,6 +197,10 @@ i {
   font-size: 20px;
   font-weight: normal;
 }
+.intro .main_info .info .icon-hi {
+  display: inline-block;
+  animation: wave 2.5s infinite;
+}
 .intro .main_info .links {
   display: flex;
   justify-content: space-between;
@@ -233,6 +246,9 @@ i {
   margin-right: 5px;
 }
 @media (max-width: 992px) {
+  .intro {
+    height: 60vh;
+  }
   .intro .main_info {
     line-height: 1.9 !important;
   }
@@ -242,8 +258,37 @@ i {
   .intro .main_info .info, .intro .main_info .links {
     width: 100%;
   }
+  .intro .main_info .info, .intro .main_info .links > p, .intro .main_info button a {
+    font-size: 18px;
+  }
   .intro .main_info button {
     margin: auto;
+  }
+}
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
@@ -251,6 +296,35 @@ i {
 /* Start About_Me */
 .about_me {
   height: 100vh;
+}
+.about_me section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin-right: 20px;
+}
+.about_me section .description {
+  line-height: 1.6;
+}
+.about_me section .description p {
+  font-size: 20px;
+}
+.about_me section .description .techs ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.about_me section .description .techs img {
+  width: 50px;
+}
+.about_me section .description .techs p {
+  font-size: 20px;
+  font-weight: 700;
+}
+.about_me section .image img {
+  width: 300px;
 }
 
 /* End About_Me */

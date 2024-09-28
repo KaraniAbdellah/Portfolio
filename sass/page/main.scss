@@ -89,6 +89,10 @@
         .info {
             font-size: 20px;
             font-weight: normal;
+            .icon-hi {
+                display: inline-block;
+                animation: wave 2.5s infinite;
+            }
         }
         .links {
             @include flex_between;
@@ -132,6 +136,7 @@
         }
     }
     @media (max-width: 992px) {
+        height: 60vh;
         .main_info {
             line-height: 1.9 !important;
             > p {
@@ -140,16 +145,58 @@
             .info, .links {
                 width: 100%;
             }
+            .info, .links > p, button  a{
+                font-size: 18px;
+            }
             button {
                 margin: auto;
             }
         }
     }
+    @keyframes wave {
+        0% { transform: rotate(0deg); }
+        10% { transform: rotate(14deg); }
+        20% { transform: rotate(-8deg); }
+        30% { transform: rotate(14deg); }
+        40% { transform: rotate(-4deg); }
+        50% { transform: rotate(10deg); }
+        60% { transform: rotate(0deg); }
+        100% { transform: rotate(0deg); }
+      }
+      
 }
 /* End Page */
 /* Start About_Me */
 .about_me {
     height: 100vh;
+    section {
+        @include flex_between;
+        width: 70%;
+        margin-right: 20px;
+        .description {
+            line-height: 1.6;
+            p {
+                font-size: 20px;
+            }
+            .techs {
+               ul {
+                @include flex_between;
+                text-align: center;
+               }
+                img {
+                    width: 50px;
+                }
+                p {
+                    font-size: 20px; font-weight: 700;
+                }
+            }
+        }
+        .image {
+            img {
+                width: 300px;
+            }
+        }
+    }
 }
 /* End About_Me */
 /* Start Experience */

@@ -28,6 +28,9 @@ a {
     display: inline-block;
     color: black;
 }
+ul {
+    list-style: none;
+}
 
 /* end global roles */
 
@@ -70,15 +73,20 @@ i {
 }
 
 .title {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 700;
     color: #ccd6f6;
     position: relative;
-    margin: 20px 0;
+    margin: 50px 0;
     z-index: 1;
     span {
         background-color: #0a192f;
-        width: 200px;
+        width: 250px;
+    }
+}
+@media (max-width: 767px) {
+    .title {
+        font-size: 32px;
     }
 }
 @media (min-width: 767px) {
