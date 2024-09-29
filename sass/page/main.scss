@@ -145,9 +145,6 @@
             .info, .links {
                 width: 100%;
             }
-            .info, .links > p, button  a{
-                font-size: 18px;
-            }
             button {
                 margin: auto;
             }
@@ -171,29 +168,67 @@
     height: 100vh;
     section {
         @include flex_between;
-        width: 70%;
         margin-right: 20px;
         .description {
             line-height: 1.6;
+            width: 60%;
             p {
                 font-size: 20px;
             }
             .techs {
+                margin-bottom: 20px;
                ul {
-                @include flex_between;
-                text-align: center;
-               }
-                img {
-                    width: 50px;
-                }
-                p {
-                    font-size: 20px; font-weight: 700;
+                    text-align: center;
+                    display: grid;
+                    grid-template-columns: repeat(3, 25%);
+                    grid-template-rows: repeat(3, 120px); // change this to auto-fill
+                    gap: 15px;
+                    li {
+                        border-radius: $border_radius;
+                        @include flex_center;
+                        flex-direction: column;
+                        cursor: pointer;
+                        transition: $transition;
+                        img {
+                            width: 40px; margin-bottom: 10px; 
+                        }
+                        p {
+                            font-size: 16px; font-weight: 700;
+                        }
+                        &:hover {
+                                background-color: rgb(238, 238, 238);
+                                p {color: black;}
+                        }
+                    }
                 }
             }
         }
         .image {
+            width: 35%;
+            box-shadow: $box_shadow;
             img {
-                width: 300px;
+                width: 100%;  border-radius: $border_radius;
+            }
+        }
+    }
+    @media (max-width: 992px) {
+        height: 100%;
+        section {
+            .description {
+                width: 100%;
+                .techs {
+                    ul {
+                        justify-content: center;
+                        grid-template-columns: repeat(2, 50%);
+                        grid-template-rows: repeat(4, 120px); // search for auto filling 
+                    }
+                }
+            }
+            .image {
+                width: 0%;
+                img {
+                    display: none;
+                }
             }
         }
     }

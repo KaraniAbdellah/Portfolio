@@ -64,6 +64,10 @@ i {
   color: white;
 }
 
+.text-phone {
+  font-size: 18px !important;
+}
+
 .blue-dark {
   color: #00d4a1;
 }
@@ -258,9 +262,6 @@ i {
   .intro .main_info .info, .intro .main_info .links {
     width: 100%;
   }
-  .intro .main_info .info, .intro .main_info .links > p, .intro .main_info button a {
-    font-size: 18px;
-  }
   .intro .main_info button {
     margin: auto;
   }
@@ -301,30 +302,74 @@ i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
   margin-right: 20px;
 }
 .about_me section .description {
   line-height: 1.6;
+  width: 60%;
 }
 .about_me section .description p {
   font-size: 20px;
 }
+.about_me section .description .techs {
+  margin-bottom: 20px;
+}
 .about_me section .description .techs ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 25%);
+  grid-template-rows: repeat(3, 120px);
+  gap: 15px;
 }
-.about_me section .description .techs img {
-  width: 50px;
+.about_me section .description .techs ul li {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.about_me section .description .techs p {
-  font-size: 20px;
+.about_me section .description .techs ul li img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+.about_me section .description .techs ul li p {
+  font-size: 16px;
   font-weight: 700;
 }
+.about_me section .description .techs ul li:hover {
+  background-color: rgb(238, 238, 238);
+}
+.about_me section .description .techs ul li:hover p {
+  color: black;
+}
+.about_me section .image {
+  width: 35%;
+  box-shadow: inset rgba(0, 0, 0, 0.15) 19px 20px 12px 3px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
 .about_me section .image img {
-  width: 300px;
+  width: 100%;
+  border-radius: 5px;
+}
+@media (max-width: 992px) {
+  .about_me {
+    height: 100%;
+  }
+  .about_me section .description {
+    width: 100%;
+  }
+  .about_me section .description .techs ul {
+    justify-content: center;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, 120px);
+  }
+  .about_me section .image {
+    width: 0%;
+  }
+  .about_me section .image img {
+    display: none;
+  }
 }
 
 /* End About_Me */
