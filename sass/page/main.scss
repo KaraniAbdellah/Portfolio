@@ -166,6 +166,9 @@
 /* Start About_Me */
 .about_me {
     height: 100vh;
+    p {
+        width: 600px;
+    }
     section {
         @include flex_between;
         margin-right: 20px;
@@ -180,8 +183,8 @@
                ul {
                     text-align: center;
                     display: grid;
-                    grid-template-columns: repeat(3, 25%);
-                    grid-template-rows: repeat(3, 120px); // change this to auto-fill
+                    grid-template-columns: repeat(3, minmax(25%, 1fr));
+                    grid-auto-rows: 120px;
                     gap: 15px;
                     li {
                         border-radius: $border_radius;
@@ -189,6 +192,7 @@
                         flex-direction: column;
                         cursor: pointer;
                         transition: $transition;
+                        padding: 0 10px;
                         img {
                             width: 40px; margin-bottom: 10px; 
                         }
@@ -213,14 +217,15 @@
     }
     @media (max-width: 992px) {
         height: 100%;
+        p {
+            width: 100%;
+        }
         section {
             .description {
                 width: 100%;
                 .techs {
                     ul {
-                        justify-content: center;
-                        grid-template-columns: repeat(2, 50%);
-                        grid-template-rows: repeat(4, 120px); // search for auto filling 
+                        grid-template-columns: repeat(2, minmax(50%, 1fr));
                     }
                 }
             }
@@ -236,7 +241,29 @@
 /* End About_Me */
 /* Start Experience */
 .experience {
-    height: 60vh;
+    height: 100%;
+    .experience-item {
+        width: 600px;
+        line-height: 1.6;
+        h2 {
+            color: $main_color;
+            font-size: 30px;
+        }
+        p.date_present {
+            margin-bottom: 6px;
+            font-size: 16px;
+            color: $grey;
+        }
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        @media (max-width: 992px) {
+            width: 100%;
+            h2 {
+                font-size: 23px;
+            }
+        }
+    }
 }
 /* End Experience */
 /* Start Projects */

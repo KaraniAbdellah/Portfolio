@@ -298,6 +298,9 @@ i {
 .about_me {
   height: 100vh;
 }
+.about_me p {
+  width: 600px;
+}
 .about_me section {
   display: flex;
   justify-content: space-between;
@@ -317,8 +320,8 @@ i {
 .about_me section .description .techs ul {
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(3, 25%);
-  grid-template-rows: repeat(3, 120px);
+  grid-template-columns: repeat(3, minmax(25%, 1fr));
+  grid-auto-rows: 120px;
   gap: 15px;
 }
 .about_me section .description .techs ul li {
@@ -329,6 +332,7 @@ i {
   flex-direction: column;
   cursor: pointer;
   transition: 0.3s;
+  padding: 0 10px;
 }
 .about_me section .description .techs ul li img {
   width: 40px;
@@ -356,13 +360,14 @@ i {
   .about_me {
     height: 100%;
   }
+  .about_me p {
+    width: 100%;
+  }
   .about_me section .description {
     width: 100%;
   }
   .about_me section .description .techs ul {
-    justify-content: center;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(4, 120px);
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
   }
   .about_me section .image {
     width: 0%;
@@ -375,7 +380,31 @@ i {
 /* End About_Me */
 /* Start Experience */
 .experience {
-  height: 60vh;
+  height: 100%;
+}
+.experience .experience-item {
+  width: 600px;
+  line-height: 1.6;
+}
+.experience .experience-item h2 {
+  color: #64ffda;
+  font-size: 30px;
+}
+.experience .experience-item p.date_present {
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: rgb(217, 217, 217);
+}
+.experience .experience-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+@media (max-width: 992px) {
+  .experience .experience-item {
+    width: 100%;
+  }
+  .experience .experience-item h2 {
+    font-size: 23px;
+  }
 }
 
 /* End Experience */
