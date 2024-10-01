@@ -64,8 +64,14 @@ i {
     color: white;
 }
 
-.text-phone {
-    font-size: 18px !important;
+@media (max-width: 767px) {
+    .text-phone {
+        font-size: 18px !important;
+    }
+}
+
+.text-computer {
+    font-size: 20px;
 }
 
 .blue-dark {

@@ -81,13 +81,12 @@
         height: calc(100vh - 250px); /* margin-top + header height */
         margin-top: 150px;
         font-weight: 700;
-        line-height: 2;
+        line-height: $line_height;
         > p {
             font-size: 70px;
             font-weight: inherit;
         }
         .info {
-            font-size: 20px;
             font-weight: normal;
             .icon-hi {
                 display: inline-block;
@@ -97,9 +96,6 @@
         .links {
             @include flex_between;
             margin: 20px 0 30px;
-            > p {
-                font-size: 20px;
-            }
             .social-icons {
                 @include flex_between;
                 a {
@@ -114,13 +110,10 @@
                 }
             }
         }
-        .info, .links {
-            width: 600px;
-        }
+        @include set_width(".info, .links");
         .get_in_touch {
             border: 1px solid $main_color;
             padding: 20px 40px;
-            font-size: 20px;
             font-weight: inherit;
             background-color: transparent;
             transition: $transition;
@@ -138,12 +131,8 @@
     @media (max-width: 992px) {
         height: 60vh;
         .main_info {
-            line-height: 1.9 !important;
             > p {
                 font-size: 33px;
-            }
-            .info, .links {
-                width: 100%;
             }
             button {
                 margin: auto;
@@ -159,33 +148,27 @@
         50% { transform: rotate(10deg); }
         60% { transform: rotate(0deg); }
         100% { transform: rotate(0deg); }
-      }
+    }
       
 }
 /* End Page */
 /* Start About_Me */
 .about_me {
-    height: 100vh;
-    p {
-        width: 600px;
+    p.desc_about_me {
+        line-height: $line_height;
     }
+    @include set_width("p.desc_about_me");
     section {
         @include flex_between;
         margin-right: 20px;
         .description {
             line-height: 1.6;
             width: 60%;
-            p {
-                font-size: 20px;
-            }
             .techs {
-                margin-bottom: 20px;
                ul {
                     text-align: center;
-                    display: grid;
-                    grid-template-columns: repeat(3, minmax(25%, 1fr));
-                    grid-auto-rows: 120px;
-                    gap: 15px;
+                    margin-bottom: 15px;
+                    @include grid_ele;
                     li {
                         border-radius: $border_radius;
                         @include flex_center;
@@ -215,19 +198,12 @@
             }
         }
     }
+    @include set_width("p.extra_info");
     @media (max-width: 992px) {
         height: 100%;
-        p {
-            width: 100%;
-        }
         section {
             .description {
                 width: 100%;
-                .techs {
-                    ul {
-                        grid-template-columns: repeat(2, minmax(50%, 1fr));
-                    }
-                }
             }
             .image {
                 width: 0%;
@@ -240,13 +216,12 @@
 }
 /* End About_Me */
 /* Start Experience */
-.experience {
+.experience {   
     height: 100%;
+    @include set_width(".experience-item");
     .experience-item {
-        width: 600px;
         line-height: 1.6;
         h2 {
-            color: $main_color;
             font-size: 30px;
         }
         p.date_present {
@@ -258,9 +233,8 @@
             margin-bottom: 15px;
         }
         @media (max-width: 992px) {
-            width: 100%;
             h2 {
-                font-size: 23px;
+                font-size: 22px;
             }
         }
     }
@@ -268,7 +242,58 @@
 /* End Experience */
 /* Start Projects */
 .projects {
-    height: 60vh;
+    height: 100%;
+    .cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(50px, 1fr));
+        grid-auto-rows: minmax(350px, 1fr);
+        justify-content: center;
+        gap: 15px;
+        .card {
+            background-color: #112240;
+            border-radius: 10px;
+            padding: 20px;
+            line-height: $line_height;
+            transition: $transition;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            .get_projects {
+                @include flex_between;
+                i {
+                    font-size: 20px;
+                }
+                div.watch_project {
+                    i {
+                        color: $grey;
+                    }
+                    i.link {
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .info_project {
+                margin: 20px 0;
+                .name {
+                    font-size: 30px;
+                }
+                .desc {
+                    color: $grey;
+                    font-size: 18px;
+                }
+            }
+            p.languages {
+                color: $grey;
+                font-size: 16px;
+            }
+            &:hover {
+               transform: translateY(-5px);
+               background-color: #75a3f12e;
+            }
+        }
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(1, minmax(200px, 1fr));
+        }
+    }
 }
 /* End Projects */
 /* Start Resume */
