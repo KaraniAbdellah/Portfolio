@@ -73,6 +73,24 @@
     }
 }
 
+@mixin make_button($ele) {
+    #{$ele} {
+        border: 1px solid $main_color;
+        padding: 20px 40px;
+        font-weight: 700;
+        background-color: transparent;
+        transition: $transition;
+        &:hover {
+            background-color: #ffffff1f;
+        }
+        a, i {
+            color: inherit;
+        }
+        i {
+            margin-right: 5px;
+        }
+    }
+}
 
 
 

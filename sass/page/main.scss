@@ -111,22 +111,7 @@
             }
         }
         @include set_width(".info, .links");
-        .get_in_touch {
-            border: 1px solid $main_color;
-            padding: 20px 40px;
-            font-weight: inherit;
-            background-color: transparent;
-            transition: $transition;
-            &:hover {
-                background-color: #ffffff1f;
-            }
-            a, i {
-                color: inherit;
-            }
-            i {
-                margin-right: 5px;
-            }
-        }
+        @include make_button(".get_in_touch");
     }
     @media (max-width: 992px) {
         height: 60vh;
@@ -298,10 +283,34 @@
 /* End Projects */
 /* Start Resume */
 .resume {
-    height: 40vh;
+    height: 100%;
+    @include make_button(".open_resume");   
 }
 /* End Resume */
-
+/* Start Footer */
+footer {
+    @include flex_between;
+    margin-top: 70px !important;
+    padding: 20px;
+    p {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    i:not(last-child) {
+        margin-right: 14px;
+    }
+    i:hover {
+        color: $main_color;
+    }
+    @media (max-width: 767px) {
+        flex-direction: column;
+        p {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+    }
+}
+/* End Footer */
 
 
 

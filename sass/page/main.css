@@ -241,7 +241,7 @@ i {
 .intro .main_info .get_in_touch {
   border: 1px solid #64ffda;
   padding: 20px 40px;
-  font-weight: inherit;
+  font-weight: 700;
   background-color: transparent;
   transition: 0.3s;
 }
@@ -478,7 +478,52 @@ i {
 /* End Projects */
 /* Start Resume */
 .resume {
-  height: 40vh;
+  height: 100%;
+}
+.resume .open_resume {
+  border: 1px solid #64ffda;
+  padding: 20px 40px;
+  font-weight: 700;
+  background-color: transparent;
+  transition: 0.3s;
+}
+.resume .open_resume:hover {
+  background-color: rgba(255, 255, 255, 0.1215686275);
+}
+.resume .open_resume a, .resume .open_resume i {
+  color: inherit;
+}
+.resume .open_resume i {
+  margin-right: 5px;
 }
 
-/* End Resume *//*# sourceMappingURL=main.css.map */
+/* End Resume */
+/* Start Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px !important;
+  padding: 20px;
+}
+footer p {
+  font-size: 15px;
+  font-weight: 700;
+}
+footer i:not(last-child) {
+  margin-right: 14px;
+}
+footer i:hover {
+  color: #64ffda;
+}
+@media (max-width: 767px) {
+  footer {
+    flex-direction: column;
+  }
+  footer p {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+}
+
+/* End Footer *//*# sourceMappingURL=main.css.map */
