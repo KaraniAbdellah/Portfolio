@@ -64,6 +64,18 @@ i {
   color: white;
 }
 
+.dark {
+  color: #444;
+}
+
+.blue-light {
+  color: #00d4a1;
+}
+
+.blue {
+  color: #64ffda;
+}
+
 @media (max-width: 767px) {
   .text-phone {
     font-size: 18px !important;
@@ -71,14 +83,6 @@ i {
 }
 .text-computer {
   font-size: 20px;
-}
-
-.blue-dark {
-  color: #00d4a1;
-}
-
-.blue {
-  color: #64ffda;
 }
 
 .title {
@@ -91,7 +95,6 @@ i {
 }
 .title span {
   background-color: #0a192f;
-  width: 250px;
 }
 
 @media (max-width: 767px) {
@@ -100,6 +103,11 @@ i {
   }
 }
 @media (min-width: 767px) {
+  span {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px 0 0;
+  }
   .title::after {
     content: "";
     position: absolute;
@@ -107,11 +115,12 @@ i {
     width: 100%;
     height: 1px;
     top: 70%;
-    right: 10px;
+    right: 0;
     z-index: -1;
   }
 }
 /* end helper classes */
+/* Start Header */
 .content header {
   height: 80px;
   display: flex;
@@ -141,11 +150,22 @@ i {
 }
 .content header .nav-links a {
   color: inherit;
-  margin-right: 15px;
   transition: 0.3s;
+}
+.content header .nav-links a.dark i::before {
+  content: "\f186";
+}
+.content header .nav-links a.light i::before {
+  content: "\f185";
+}
+.content header .nav-links a:not(:last-child) {
+  margin-right: 15px;
 }
 .content header .nav-links a:hover {
   color: #64ffda;
+}
+.content header .nav-links a.blue-light:hover {
+  color: #00d4a1;
 }
 @media (max-width: 767px) {
   .content header {
@@ -188,6 +208,7 @@ i {
   }
 }
 
+/* End Header */
 /* Start Page */
 .intro {
   height: 70vh;
@@ -228,7 +249,7 @@ i {
   margin-right: 15px;
 }
 .intro .main_info .links .social-icons a:hover {
-  color: #64ffda;
+  color: #00d4a1;
 }
 .intro .main_info .info, .intro .main_info .links {
   width: 600px;
@@ -239,14 +260,19 @@ i {
   }
 }
 .intro .main_info .get_in_touch {
-  border: 1px solid #64ffda;
   padding: 20px 40px;
   font-weight: 700;
   background-color: transparent;
   transition: 0.3s;
+  color: #64ffda;
+  border: 1px solid #64ffda;
+}
+.intro .main_info .get_in_touch.blue-light {
+  color: #00d4a1;
+  border: 1px solid #00d4a1;
 }
 .intro .main_info .get_in_touch:hover {
-  background-color: rgba(255, 255, 255, 0.1215686275);
+  background-color: rgba(255, 255, 255, 0.0705882353);
 }
 .intro .main_info .get_in_touch a, .intro .main_info .get_in_touch i {
   color: inherit;
@@ -405,7 +431,7 @@ i {
 .experience .experience-item p.date_present {
   margin-bottom: 6px;
   font-size: 16px;
-  color: rgb(217, 217, 217);
+  color: rgb(141, 141, 141);
 }
 .experience .experience-item:not(:last-child) {
   margin-bottom: 15px;
@@ -446,10 +472,16 @@ i {
   font-size: 20px;
 }
 .projects .cards .card .get_projects div.watch_project i {
-  color: rgb(217, 217, 217);
+  color: rgb(141, 141, 141);
 }
 .projects .cards .card .get_projects div.watch_project i.link {
   margin-left: 10px;
+}
+.projects .cards .card.light {
+  background-color: white !important;
+}
+.projects .cards .card.light:hover {
+  background-color: #f3f3f3 !important;
 }
 .projects .cards .card .info_project {
   margin: 20px 0;
@@ -458,11 +490,11 @@ i {
   font-size: 30px;
 }
 .projects .cards .card .info_project .desc {
-  color: rgb(217, 217, 217);
+  color: rgb(141, 141, 141);
   font-size: 18px;
 }
 .projects .cards .card p.languages {
-  color: rgb(217, 217, 217);
+  color: rgb(141, 141, 141);
   font-size: 16px;
 }
 .projects .cards .card:hover {
@@ -481,14 +513,19 @@ i {
   height: 100%;
 }
 .resume .open_resume {
-  border: 1px solid #64ffda;
   padding: 20px 40px;
   font-weight: 700;
   background-color: transparent;
   transition: 0.3s;
+  color: #64ffda;
+  border: 1px solid #64ffda;
+}
+.resume .open_resume.blue-light {
+  color: #00d4a1;
+  border: 1px solid #00d4a1;
 }
 .resume .open_resume:hover {
-  background-color: rgba(255, 255, 255, 0.1215686275);
+  background-color: rgba(255, 255, 255, 0.0705882353);
 }
 .resume .open_resume a, .resume .open_resume i {
   color: inherit;
@@ -514,7 +551,7 @@ footer i:not(last-child) {
   margin-right: 14px;
 }
 footer i:hover {
-  color: #64ffda;
+  color: #00d4a1;
 }
 @media (max-width: 767px) {
   footer {

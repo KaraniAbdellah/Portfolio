@@ -75,13 +75,18 @@
 
 @mixin make_button($ele) {
     #{$ele} {
-        border: 1px solid $main_color;
         padding: 20px 40px;
         font-weight: 700;
         background-color: transparent;
         transition: $transition;
+        color: $main_color_dark;
+        border: 1px solid $main_color_dark;
+        &.blue-light {
+            color: $main_color_light;
+            border: 1px solid $main_color_light;
+        }
         &:hover {
-            background-color: #ffffff1f;
+            background-color: #ffffff12;
         }
         a, i {
             color: inherit;

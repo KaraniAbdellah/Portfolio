@@ -4,6 +4,7 @@
 @use "../helpers/var" as *;
 
 
+/* Start Header */
 .content {
     header {
         height: 80px;
@@ -26,11 +27,26 @@
             @include flex_between;
             a {
                 color: inherit;
-                margin-right: 15px;
                 transition: $transition;
+                &.dark {
+                    i::before {
+                        content: "\f186";
+                    }
+                }
+                &.light {
+                    i::before {
+                        content: "\f185";
+                    }
+                }
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
             }
             a:hover {
-                color: $main_color;
+                color: $main_color_dark;
+            }
+            a.blue-light:hover {
+                color: $main_color_light;
             }
         }
     }
@@ -73,6 +89,7 @@
         }
     }
 }
+/* End Header */
 
 /* Start Page */
 .intro {
@@ -106,7 +123,7 @@
                     transition: $transition;
                 }
                 a:hover {
-                    color: $main_color;
+                    color: $main_color_light;
                 }
             }
         }
@@ -137,6 +154,7 @@
       
 }
 /* End Page */
+
 /* Start About_Me */
 .about_me {
     p.desc_about_me {
@@ -200,6 +218,7 @@
     }
 }
 /* End About_Me */
+
 /* Start Experience */
 .experience {   
     height: 100%;
@@ -225,6 +244,7 @@
     }
 }
 /* End Experience */
+
 /* Start Projects */
 .projects {
     height: 100%;
@@ -256,6 +276,12 @@
                     }
                 }
             }
+            &.light {
+                background-color: white !important;
+                &:hover {
+                    background-color: #f3f3f3 !important;
+                }
+            }
             .info_project {
                 margin: 20px 0;
                 .name {
@@ -281,12 +307,14 @@
     }
 }
 /* End Projects */
+
 /* Start Resume */
 .resume {
     height: 100%;
     @include make_button(".open_resume");   
 }
 /* End Resume */
+
 /* Start Footer */
 footer {
     @include flex_between;
@@ -300,7 +328,7 @@ footer {
         margin-right: 14px;
     }
     i:hover {
-        color: $main_color;
+        color: $main_color_light;
     }
     @media (max-width: 767px) {
         flex-direction: column;
@@ -312,5 +340,10 @@ footer {
 }
 /* End Footer */
 
+
+
+
+
+// Custom The Color Please
 
 
