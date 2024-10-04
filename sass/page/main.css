@@ -25,7 +25,6 @@ input {
 a {
   text-decoration: none;
   display: inline-block;
-  color: black;
 }
 
 ul {
@@ -88,13 +87,15 @@ i {
 .title {
   font-size: 40px;
   font-weight: 700;
-  color: #ccd6f6;
   position: relative;
   margin: 50px 0;
   z-index: 1;
 }
-.title span {
-  background-color: #0a192f;
+.title span.white {
+  background-color: #0a192f !important;
+}
+.title span.dark {
+  background-color: white;
 }
 
 @media (max-width: 767px) {
@@ -147,25 +148,36 @@ i {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .content header .nav-links a {
-  color: inherit;
   transition: 0.3s;
-}
-.content header .nav-links a.dark i::before {
-  content: "\f186";
-}
-.content header .nav-links a.light i::before {
-  content: "\f185";
 }
 .content header .nav-links a:not(:last-child) {
   margin-right: 15px;
 }
-.content header .nav-links a:hover {
+.content header .nav-links a.white:hover {
   color: #64ffda;
 }
-.content header .nav-links a.blue-light:hover {
+.content header .nav-links a.dark:hover {
   color: #00d4a1;
+}
+.content header .nav-links p.ele_mode {
+  cursor: pointer;
+}
+.content header .nav-links p.ele_mode.dark {
+  color: #444 !important;
+}
+.content header .nav-links p.ele_mode.dark i::before {
+  content: "\f186";
+}
+.content header .nav-links p.ele_mode.light {
+  color: white !important;
+}
+.content header .nav-links p.ele_mode.light i::before {
+  content: "\f185";
 }
 @media (max-width: 767px) {
   .content header {
@@ -235,20 +247,20 @@ i {
   justify-content: space-between;
   align-items: center;
   margin: 20px 0 30px;
-}
-.intro .main_info .links .social-icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.intro .main_info .links .social-icons a {
-  color: inherit;
+.intro .main_info .links a {
   transition: 0.3s;
 }
-.intro .main_info .links .social-icons a:not(:last-child) {
+.intro .main_info .links a:not(:last-child) {
   margin-right: 15px;
 }
-.intro .main_info .links .social-icons a:hover {
+.intro .main_info .links a.white:hover {
+  color: #64ffda;
+}
+.intro .main_info .links a.dark:hover {
   color: #00d4a1;
 }
 .intro .main_info .info, .intro .main_info .links {
@@ -343,7 +355,7 @@ i {
 }
 .about_me section .description .techs ul {
   text-align: center;
-  margin-bottom: 15px;
+  margin: 25px 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(25%, 1fr));
   grid-auto-rows: 120px;
@@ -542,25 +554,24 @@ footer {
   align-items: center;
   margin-top: 70px !important;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 footer p {
-  font-size: 15px;
   font-weight: 700;
 }
-footer i:not(last-child) {
-  margin-right: 14px;
+footer a {
+  transition: 0.3s;
 }
-footer i:hover {
+footer a:not(:last-child) {
+  margin-right: 15px;
+}
+footer a.white:hover {
+  color: #64ffda;
+}
+footer a.dark:hover {
   color: #00d4a1;
-}
-@media (max-width: 767px) {
-  footer {
-    flex-direction: column;
-  }
-  footer p {
-    margin-bottom: 20px;
-    font-size: 14px;
-  }
 }
 
 /* End Footer *//*# sourceMappingURL=main.css.map */

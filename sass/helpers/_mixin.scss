@@ -98,5 +98,21 @@
 }
 
 
+@mixin make_links {
+    @include flex_between;
+    a {
+        transition: $transition;
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+        &.white:hover {
+            color: $main_color_dark;
+        }
+        &.dark:hover {
+            color: $main_color_light;
+        }
+    }
+        
+}
 
 

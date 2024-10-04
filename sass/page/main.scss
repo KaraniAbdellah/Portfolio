@@ -12,9 +12,7 @@
         font-weight: 700;
         padding: 20px;
         margin-bottom: 20px;
-        position: fixed;
-        top: 0;
-        left: 50%;
+        position: fixed; top: 0; left: 50%;
         @include blur_color;
         transform: translateX(-50%);
         width: 80%;
@@ -25,28 +23,21 @@
         }
         .nav-links {
             @include flex_between;
-            a {
-                color: inherit;
-                transition: $transition;
+            @include make_links;
+            p.ele_mode {
+                cursor: pointer;
                 &.dark {
                     i::before {
                         content: "\f186";
                     }
+                    color: #444 !important;
                 }
                 &.light {
                     i::before {
                         content: "\f185";
                     }
+                    color: white !important;
                 }
-                &:not(:last-child) {
-                    margin-right: 15px;
-                }
-            }
-            a:hover {
-                color: $main_color_dark;
-            }
-            a.blue-light:hover {
-                color: $main_color_light;
             }
         }
     }
@@ -113,19 +104,7 @@
         .links {
             @include flex_between;
             margin: 20px 0 30px;
-            .social-icons {
-                @include flex_between;
-                a {
-                    &:not(:last-child) {
-                    margin-right: 15px;
-                    }
-                    color: inherit;
-                    transition: $transition;
-                }
-                a:hover {
-                    color: $main_color_light;
-                }
-            }
+            @include make_links;
         }
         @include set_width(".info, .links");
         @include make_button(".get_in_touch");
@@ -151,7 +130,6 @@
         60% { transform: rotate(0deg); }
         100% { transform: rotate(0deg); }
     }
-      
 }
 /* End Page */
 
@@ -170,7 +148,7 @@
             .techs {
                ul {
                     text-align: center;
-                    margin-bottom: 15px;
+                    margin: 25px 0;
                     @include grid_ele;
                     li {
                         border-radius: $border_radius;
@@ -319,24 +297,11 @@
 footer {
     @include flex_between;
     margin-top: 70px !important;
-    padding: 20px;
     p {
-        font-size: 15px;
         font-weight: 700;
     }
-    i:not(last-child) {
-        margin-right: 14px;
-    }
-    i:hover {
-        color: $main_color_light;
-    }
-    @media (max-width: 767px) {
-        flex-direction: column;
-        p {
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-    }
+    padding: 20px;
+    @include make_links;
 }
 /* End Footer */
 
@@ -344,6 +309,5 @@ footer {
 
 
 
-// Custom The Color Please
 
 
