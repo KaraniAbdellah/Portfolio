@@ -12,6 +12,10 @@ body {
     background-color: #0a192f;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 button {
     outline: 0;
     border: 0;

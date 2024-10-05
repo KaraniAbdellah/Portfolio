@@ -21,6 +21,11 @@
         .name {
             font-size: 30px;
         }
+        .navbar.dark {
+            i {
+                color: $grey;
+            }
+        }
         .nav-links {
             @include flex_between;
             @include make_links;
@@ -40,6 +45,7 @@
                 }
             }
         }
+        
     }
     @media (max-width: 767px) {
         header {
@@ -234,7 +240,6 @@
         justify-content: center;
         gap: 15px;
         .card {
-            background-color: #112240;
             border-radius: 10px;
             padding: 20px;
             line-height: $line_height;
@@ -276,11 +281,26 @@
             }
             &:hover {
                transform: translateY(-5px);
-               background-color: #75a3f12e;
             }
         }
         @media (max-width: 992px) {
             grid-template-columns: repeat(1, minmax(200px, 1fr));
+        }
+        &.light_card {
+            .card {
+                background-color: #f3f4f6;
+                &:hover {
+                    background-color: #eaeaea;
+                }
+            }
+        }
+        &.dark_card {
+            .card {
+                background-color: #112240;
+                &:hover {
+                    background-color: #75a3f12e;
+                }
+            }
         }
     }
 }
@@ -310,4 +330,4 @@ footer {
 
 
 
-
+// change the idea of change the colors in light mode.
