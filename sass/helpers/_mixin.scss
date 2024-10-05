@@ -79,14 +79,10 @@
         font-weight: 700;
         background-color: transparent;
         transition: $transition;
-        color: $main_color_dark;
-        border: 1px solid $main_color_dark;
-        &.blue-light {
-            color: $main_color_light;
-            border: 1px solid $main_color_light;
-        }
+        color: var(--text-color-bright);
+        border: 1px solid var(--text-color-bright);
         &:hover {
-            background-color: #ffffff12;
+            background-color: var(--bg-hover-button);
         }
         a, i {
             color: inherit;
@@ -101,15 +97,13 @@
 @mixin make_links {
     @include flex_between;
     a {
+        color: var(--text-color);
         transition: $transition;
         &:not(:last-child) {
             margin-right: 15px;
         }
-        &.white:hover {
-            color: $main_color_dark;
-        }
-        &.dark:hover {
-            color: $main_color_light;
+        &:hover {
+            color: var(--text-color-bright);
         }
     }
         

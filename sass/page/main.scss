@@ -18,30 +18,28 @@
         width: 80%;
         box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
         z-index: 100;
-        .name {
-            font-size: 30px;
+        .header_info {
+            .name {
+                font-size: 30px;
+                a { color: var(--text-color); }
+            }
         }
-        .navbar.dark {
+        .navbar {
             i {
-                color: $grey;
+                color: var(--text-color);
             }
         }
         .nav-links {
             @include flex_between;
             @include make_links;
             p.ele_mode {
+                color: var(--text-color);
                 cursor: pointer;
-                &.dark {
-                    i::before {
-                        content: "\f186";
-                    }
-                    color: #444 !important;
+                i::before {
+                    content: var(--mode-icon);
                 }
-                &.light {
-                    i::before {
-                        content: "\f185";
-                    }
-                    color: white !important;
+                &:hover {
+                    color: var(--text-color-bright);
                 }
             }
         }
@@ -96,9 +94,13 @@
         margin-top: 150px;
         font-weight: 700;
         line-height: $line_height;
-        > p {
+        p.hello {
             font-size: 70px;
             font-weight: inherit;
+            color: var(--text-color);
+            .auto-type {
+                color: var(--text-color-bright);
+            }
         }
         .info {
             font-weight: normal;
@@ -106,8 +108,14 @@
                 display: inline-block;
                 animation: wave 2.5s infinite;
             }
+            p {
+                color: var(--text-color);
+            }
         }
         .links {
+            p {
+                color: var(--text-color);
+            }
             @include flex_between;
             margin: 20px 0 30px;
             @include make_links;
@@ -118,7 +126,7 @@
     @media (max-width: 992px) {
         height: 60vh;
         .main_info {
-            > p {
+            p.hello {
                 font-size: 33px;
             }
             button {
@@ -143,6 +151,7 @@
 .about_me {
     p.desc_about_me {
         line-height: $line_height;
+        color: var(--text-color);
     }
     @include set_width("p.desc_about_me");
     section {
@@ -167,7 +176,7 @@
                             width: 40px; margin-bottom: 10px; 
                         }
                         p {
-                            font-size: 16px; font-weight: 700;
+                            font-size: 16px; font-weight: 700; color: var(--text-color);
                         }
                         &:hover {
                                 background-color: rgb(238, 238, 238);
@@ -184,6 +193,9 @@
                 width: 100%;  border-radius: $border_radius;
             }
         }
+    }
+    p.extra_info{
+        color: var(--text-color);
     }
     @include set_width("p.extra_info");
     @media (max-width: 992px) {
@@ -211,11 +223,15 @@
         line-height: 1.6;
         h2 {
             font-size: 30px;
+            color: var(--text-color-bright);
         }
         p.date_present {
             margin-bottom: 6px;
             font-size: 16px;
             color: $grey;
+        }
+        p {
+            color: var(--text-color);
         }
         &:not(:last-child) {
             margin-bottom: 15px;
@@ -240,15 +256,16 @@
         justify-content: center;
         gap: 15px;
         .card {
-            border-radius: 10px;
+            background-color: var(--bg-color-card);
             padding: 20px;
             line-height: $line_height;
-            transition: $transition;
+            border-radius: 10px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            transition: $transition;
             .get_projects {
                 @include flex_between;
                 i {
-                    font-size: 20px;
+                    font-size: 20px; color: var(--text-color-bright);
                 }
                 div.watch_project {
                     i {
@@ -259,16 +276,13 @@
                     }
                 }
             }
-            &.light {
-                background-color: white !important;
-                &:hover {
-                    background-color: #f3f3f3 !important;
-                }
+            &:hover {
+                background-color: var(--bg-hover-card);
             }
             .info_project {
                 margin: 20px 0;
                 .name {
-                    font-size: 30px;
+                    font-size: 30px; color: var(--text-color);
                 }
                 .desc {
                     color: $grey;
@@ -286,22 +300,6 @@
         @media (max-width: 992px) {
             grid-template-columns: repeat(1, minmax(200px, 1fr));
         }
-        &.light_card {
-            .card {
-                background-color: #f3f4f6;
-                &:hover {
-                    background-color: #eaeaea;
-                }
-            }
-        }
-        &.dark_card {
-            .card {
-                background-color: #112240;
-                &:hover {
-                    background-color: #75a3f12e;
-                }
-            }
-        }
     }
 }
 /* End Projects */
@@ -318,7 +316,7 @@ footer {
     @include flex_between;
     margin-top: 70px !important;
     p {
-        font-weight: 700;
+        font-weight: 700; color: var(--text-color);
     }
     padding: 20px;
     @include make_links;
@@ -330,4 +328,3 @@ footer {
 
 
 
-// change the idea of change the colors in light mode.

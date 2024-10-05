@@ -1,12 +1,33 @@
 
-$backgroung_color: #0a192f;
 $main_color_light: #00d4a1;
 $main_color_dark: #64ffda;
+$grey: #8d8d8d;
 $transition: 0.3s;
 $border_radius: 5px;
 $box_shadow: inset rgba(0, 0, 0, 0.15) 19px 20px 12px 3px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-$grey: rgb(141, 141, 141);
 $line_height: 1.9;
+
+
+
+:root {
+    --text-color: white;
+    --text-color-bright: #64ffda;
+    --bg-color: #0a192f;
+    --mode-icon: "\f185";
+    --bg-hover-button: #ffffff12;
+    --bg-hover-card: #75a3f12e;
+    --bg-color-card: #0c203d;
+}
+[data-theme="light"] {
+    --text-color: #444;
+    --text-color-bright: #00d4a1;
+    --bg-color: white;
+    --mode-icon: "\f186";
+    --bg-hover-button: #f3f3f3bd;
+    --bg-hover-card: #eee;
+    --bg-color-card: #f8f8f8;
+}
+
 
 
 

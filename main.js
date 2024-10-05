@@ -17,70 +17,23 @@ navbar.addEventListener("click", function() {
 
 // Fix The Dark Mode
 const mode_ele = document.querySelector(".ele_mode");
-const cards_ele = document.querySelector(".cards");
 
 mode_ele.addEventListener("click", function() {
-    if (mode_ele.classList.contains("light")) {
-        document.body.style.backgroundColor = "white";
-        
-        change_icon("dark", "light");
-        set_cards("light_card", "dark_card");
-
-        set_titles_classes("white", "dark");
-        set_blue_classes("blue", "blue-light");
-        set_white_classes("white", "dark");
-    }
-    else {
-        document.body.style.backgroundColor = "#0a192f";
-        change_icon("light", "dark");
-        set_cards("dark_card", "light_card");
-
-        set_titles_classes("dark", "white");
-        set_blue_classes("blue-light", "blue");
-        set_white_classes("dark", "white");
+    let attr_value = document.body.getAttribute('data-theme');
+    if (attr_value === "dark") {
+        document.body.setAttribute('data-theme', 'light');
+    } else {
+        document.body.setAttribute('data-theme', 'dark');
     }
 });
 
-function set_cards(to_add, to_remove) {
-    cards_ele.classList.add(to_add);
-    cards_ele.classList.remove(to_remove);
-}
-
-function change_icon(to_add, to_remove) {
-    mode_ele.classList.add(to_add);
-    mode_ele.classList.remove(to_remove);
-}
-
-function set_white_classes(to_add, to_remove) {
-    const eles_white = document.querySelectorAll(`.${to_add}`);
-    eles_white.forEach(element => {
-        element.classList.add(to_remove);
-        element.classList.remove(to_add);
-    });
-}
-
-function set_blue_classes(to_add, to_remove) {
-    let blue_eles = document.querySelectorAll(`.${to_add}`);
-    blue_eles.forEach(element => {
-        element.classList.add(to_remove);
-        element.classList.remove(to_add);
-    });
-}
-
-function set_titles_classes(to_add, to_remove) {
-    let title_eles = document.querySelectorAll(".title span");
-    title_eles.forEach(element => {
-        element.classList.add(to_add);
-        element.classList.remove(to_remove);
-    });
-}
 
 
 // Open The Resume
 
 
 
-
+// custom the toogle & open resume section.
 
 
 
