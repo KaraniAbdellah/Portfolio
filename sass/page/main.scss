@@ -98,7 +98,8 @@
             font-size: 70px;
             font-weight: inherit;
             color: var(--text-color);
-            .auto-type {
+            position: relative;
+            .auto-type, .typed-cursor {
                 color: var(--text-color-bright);
             }
         }

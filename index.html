@@ -40,7 +40,7 @@
         <!-- Start Introduction Section -->
         <section id="home" class="page intro container">
             <div class="main_info">
-                <p class="hello">Hello! I'm <span class="auto-type">Abdellah</span></p>
+                <p class="hello">Hello! I'm <span class="auto-type"></span></p>
                 <div class="info">
                     <p class=" text-phone text-computer">I'm software engineer from Morocco 🇲🇦, currently in my third year of university 🎓 (Licence).
                         I am a full stack developer working with JavaScript and enjoy sharing knowledge 
@@ -63,7 +63,7 @@
                 </div>
                 <button class="get_in_touch text-computer text-phone">
                     <i class="fa-solid fa-envelope"></i>
-                    <a href="#" class="text-phone">Get in touch</a>
+                    <a href="mailto:abdellahkarani@gmail.com" class="text-phone">Get in touch</a>
                 </button>
             </div>
         </section>
@@ -182,9 +182,9 @@
             <p class="title">
                 <span></span>
             </p>
-            <button class="open_resume text-computer text-phone">
+            <button onclick="window.open('resume.pdf')" class="open_resume text-computer text-phone">
                 <i class="fa-solid fa-file"></i>
-                <a href="#" class="text-phone">Open Resume</a>
+                <a target="_blank" href="#" class="text-phone">Open Resume</a>
             </button>
         </section>
         <!-- Start Footer -->
@@ -204,6 +204,8 @@
         </footer>
     </div>
 
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="main.js"></script>
 
 </body>

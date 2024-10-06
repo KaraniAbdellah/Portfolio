@@ -27,13 +27,17 @@ mode_ele.addEventListener("click", function() {
     }
 });
 
+// Auto-Type
+var typed = new Typed(".auto-type", {
+    strings: ["Moroccan", "Abdellah"],
+    typeSpeed: 150,
+    backSpeed: 150,
+    loop: false,
+});
 
 
-// Open The Resume
+// Fix The Animation
 
-
-
-// custom the toogle & open resume section.
 
 
 
