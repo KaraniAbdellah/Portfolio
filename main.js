@@ -1,4 +1,5 @@
 
+
 // Fix The NavBar
 let nav_links = document.querySelector(".nav-links");
 let navbar = document.querySelector(".navbar i");
@@ -27,6 +28,7 @@ mode_ele.addEventListener("click", function() {
     }
 });
 
+
 // Auto-Type
 var typed = new Typed(".auto-type", {
     strings: ["Moroccan", "Abdellah"],
@@ -35,14 +37,21 @@ var typed = new Typed(".auto-type", {
     loop: false,
 });
 
+
 // Animation For All Element
+/* 
+    - rect.top: distance from the top of page to the element
+    - rect.height: height of element
+*/
 window.addEventListener("scroll", function() {
     const elements = this.document.querySelectorAll(".page");
     
     elements.forEach(element => {
         const rect = element.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top + rect.height <= window.scrollY) { 
+        if (rect.top >= 0 < this.window.innerHeight && rect.bottom >= 0) { 
             element.classList.add("inDown");
+        } else {
+            element.classList.remove("inDown");
         }
     });
 });

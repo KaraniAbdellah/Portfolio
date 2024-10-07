@@ -57,11 +57,15 @@ i {
     position: relative;
     z-index: 1;
     transform: translateY(-100px);
-    transition: 1s;
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+
     &.inDown {
-        transform: translateY(100px);
+        transform: translateY(0);
+        opacity: 1;
     }
 }
+
 
 .container {
     margin: 0 140px;
