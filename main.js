@@ -35,8 +35,28 @@ var typed = new Typed(".auto-type", {
     loop: false,
 });
 
+// Animation For All Element
+window.addEventListener("scroll", function() {
+    const elements = this.document.querySelectorAll(".page");
+    
+    elements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top + rect.height <= window.scrollY) { 
+            element.classList.add("inDown");
+        }
+    });
+});
 
-// Fix The Animation
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -73,6 +73,11 @@ i {
 .page {
   position: relative;
   z-index: 1;
+  transform: translateY(-100px);
+  transition: 1s;
+}
+.page.inDown {
+  transform: translateY(100px);
 }
 
 .container {
