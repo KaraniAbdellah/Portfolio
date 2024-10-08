@@ -10,15 +10,6 @@ $line_height: 1.9;
 
 
 :root {
-    --text-color: white;
-    --text-color-bright: #64ffda;
-    --bg-color: #0a192f;
-    --mode-icon: "\f185";
-    --bg-hover-button: #ffffff12;
-    --bg-hover-card: #75a3f12e;
-    --bg-color-card: #0c203d;
-}
-[data-theme="light"] {
     --text-color: #444;
     --text-color-bright: #00d4a1;
     --bg-color: white;
@@ -26,6 +17,15 @@ $line_height: 1.9;
     --bg-hover-button: #f3f3f3bd;
     --bg-hover-card: #eee;
     --bg-color-card: #f8f8f8;
+}
+[data-theme="light"] {
+    --text-color: white;
+    --text-color-bright: #64ffda;
+    --bg-color: #0a192f;
+    --mode-icon: "\f185";
+    --bg-hover-button: #ffffff12;
+    --bg-hover-card: #75a3f12e;
+    --bg-color-card: #0c203d;
 }
 
 
