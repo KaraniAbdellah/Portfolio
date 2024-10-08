@@ -56,9 +56,12 @@ i {
 .page {
     position: relative;
     z-index: 1;
-    transform: translateY(-100px);
+}
+
+.trigger, .intro {
+    transform: translateY(100px);
     opacity: 0;
-    transition: transform 1s ease, opacity 1s ease;
+    transition: transform 2s ease, opacity 1s ease;
 
     &.inDown {
         transform: translateY(0);

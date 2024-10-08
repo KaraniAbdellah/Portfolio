@@ -43,21 +43,30 @@ var typed = new Typed(".auto-type", {
     - rect.top: distance from the top of page to the element
     - rect.height: height of element
 */
+
 window.addEventListener("scroll", function() {
-    const elements = this.document.querySelectorAll(".page");
-    
+    const elements = document.querySelectorAll(".trigger");
     elements.forEach(element => {
         const rect = element.getBoundingClientRect();
-        if (rect.top >= 0 < this.window.innerHeight && rect.bottom >= 0) { 
+        if (rect.top <= window.innerHeight * 0.8) {
             element.classList.add("inDown");
-        } else {
-            element.classList.remove("inDown");
         }
     });
 });
 
+function main_page_trigger() {
+    document.addEventListener("DOMContentLoaded", function() {
+        const element = document.querySelector("#intro");
+        if (element.getBoundingClientRect().top <= window.innerHeight * 0.8) {
+            element.classList.add("inDown");
+        }
+    });
+}
+
+main_page_trigger();
 
 
+// custom the animation ---> go to see the video about idea
 
 
 

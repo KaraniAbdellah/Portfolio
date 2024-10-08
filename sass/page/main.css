@@ -73,11 +73,14 @@ i {
 .page {
   position: relative;
   z-index: 1;
-  transform: translateY(-100px);
-  opacity: 0;
-  transition: transform 1s ease, opacity 1s ease;
 }
-.page.inDown {
+
+.trigger, .intro {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 2s ease, opacity 1s ease;
+}
+.trigger.inDown, .intro.inDown {
   transform: translateY(0);
   opacity: 1;
 }
@@ -315,7 +318,7 @@ i {
     height: 60vh;
   }
   .intro .main_info p.hello {
-    font-size: 33px;
+    font-size: 32px;
   }
   .intro .main_info button {
     margin: auto;
