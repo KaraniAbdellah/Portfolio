@@ -21,6 +21,10 @@ button {
     cursor: pointer;
 }
 
+p {
+    margin: 0;
+}
+
 input {
     outline: 0;
     border: 0;
@@ -88,12 +92,12 @@ img {
 
 @media (max-width: 767px) {
     .text-phone {
-        font-size: 18px !important;
+        font-size: 20px !important;
     }
 }
 
 .text-computer {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 
@@ -124,16 +128,25 @@ img {
     --line-height: 1.9;
   }
 
-/* end global rules */
+/* End Global Rules */
 
 
+/* Start Header */
 header {
     background-color: rgb(255 255 255 / 0%);
     backdrop-filter: blur(10px);
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-    /* position: fixed; */
+    position: fixed;
+    width: calc(100% - 200px);
     top: 0;
     z-index: 1000;
+}
+@media (max-width: 992px) {
+    header {
+        right: 50%;
+        transform: translateX(50%);
+        width: calc(100% - 80px);
+    }
 }
 @media (max-width: 767px) {
     header {
@@ -159,7 +172,34 @@ header {
 .nav_links a:hover {
     color: var(--main-color-light) !important;
 }
+/* End Header */
 
+
+/* Start Section Introduction */
+section.intro {
+    margin-top: 200px !important;
+    width: 50%;
+}
+@media (max-width: 992px) {
+    section.intro {
+        width: calc(100% - 80px);
+    }
+}
+
+section.intro .links {
+
+}
+
+.get_in_touch {
+    padding: 20px 40px;
+    font-weight: 700;
+    background-color: transparent;
+    transition: var(--transition);
+    border: 1px solid var(--main-color-light);
+}
+section.into .links .social_icons a:hover i {
+    color: var(--main-color-light);
+}
 
 
 
