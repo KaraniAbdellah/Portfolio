@@ -12,32 +12,35 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- Style File -->
-    <link rel="stylesheet" href="sass/page/main.css">
+    <!-- <link rel="stylesheet" href="sass/page/main.css"> -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body data-theme="dark">
 
     <div class="content">
         <!-- Start Header Section -->
-        <header class="header d-flex justify-content-between align-items-center">
-            <div class="header_info">
-                <div class="name">
-                    <a href="">Abdellah</a>
-                </div>
-                <div class="dark navbar hidden">
+        <header class="header container_dektop py-2 px-4 d-md-flex justify-content-between align-items-center">
+            <div class="header_info d-flex justify-content-between align-items-center">
+                <p class="name m-0 fs-3 fw-semibold">
+                    <a class="text-secondary" href="">Abdellah</a>
+                </p>
+                <p class="hidden-desktop text-secondary m-0 fs-3 navbar-icon p-0">
                     <i class="fa-solid fa-bars"></i>
-                </div>
+                </p>
             </div>
-            <div class="nav-links">
-                <a href="#">home</a>
-                <a href="#about_me">about_me</a>
-                <a href="#experience">experience</a>
-                <a href="#projects">projects</a>
-                <a href="#resume">resume</a>
-                <p href="#" class="ele_mode"><i class="fa-solid fa-sun"></i></p>
+            <div class="nav_links hidden-phone d-flex text-center">
+                <a class="text-secondary fw-semibold" href="#">home</a>
+                <a class="ms-2 text-secondary fw-semibold" href="#about_me">about_me</a>
+                <a class="ms-2 text-secondary fw-semibold" href="#experience">experience</a>
+                <a class="ms-2 text-secondary fw-semibold" href="#projects">projects</a>
+                <a class="ms-2 text-secondary fw-semibold" href="#resume">resume</a>
+                <a class="ms-2 text-secondary fw-semibold" href="#" class="ele_mode"><i class="fa-solid fa-sun"></i></a>
             </div>
         </header>
         <!-- Start Introduction Section -->
-        <section id="intro" class="page intro container">
+        <section id="intro" class="page intro container_dektop container_phone">
             <div class="main_info">
                 <p class="hello">Hello! I'm <span class="auto-type"></span></p>
                 <div class="info">
@@ -67,7 +70,7 @@
             </div>
         </section>
         <!-- Start About_me Section -->
-        <section id="about_me" class="trigger page about_me container">
+        <section id="about_me" class="trigger page about_me container_dektop container_phone">
             <p class="title">
                 <span># Abount me</span>
             </p>
@@ -97,7 +100,7 @@
             <p class="extra_info  text-phone text-computer">When I'm away, I'm usually reading a book or outside enjoying the world.</p>
         </section>
         <!-- Start Experience Section -->
-        <section id="experience" class="trigger page experience container">
+        <section id="experience" class="trigger page experience container_dektop container_phone">
             <p class="title">
                 <span># Experience</span>
             </p>
@@ -121,7 +124,7 @@
             </div>
         </section>
         <!-- Start Project -->
-        <section id="projects" class="trigger page projects container">
+        <section id="projects" class="trigger page projects container_dektop container_phone">
             <p class="title">
                 <span># Projects</span>
             </p>
@@ -177,7 +180,7 @@
             </div>
         </section>
         <!-- Start Resume -->
-        <section id="resume" class="trigger page resume container">
+        <section id="resume" class="trigger page resume container_dektop container_phone">
             <p class="title">
                 <span>Resume</span>
             </p>
@@ -187,7 +190,7 @@
             </button>
         </section>
         <!-- Start Footer -->
-        <footer class="container">
+        <footer class="container_dektop container_phone">
             <p>Copyright ©<span class="date">2024</span>| All rights reserved.</p>
             <div class="social-icons">
                 <a target="_blank" href="https://github.com/KaraniAbdellah">
@@ -205,7 +208,7 @@
 
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="main.js"></script>
+    <script src="src.js"></script>
 
 </body>
 </html>
