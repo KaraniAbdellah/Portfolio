@@ -66,11 +66,6 @@ function main_page_trigger() {
 main_page_trigger();
 
 
-// custom the animation ---> go to see the video about idea
-
-
-
-
 
 
 
