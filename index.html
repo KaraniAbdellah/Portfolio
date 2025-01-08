@@ -17,8 +17,7 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body data-theme="dark">
-
+<body data-theme="light">
     <div class="content">
         <!-- Start Header Section -->
         <header class="header container_dektop py-2 px-4 d-md-flex justify-content-between align-items-center">
@@ -63,7 +62,7 @@
                         </a>
                     </div>
                 </div>
-                <button class="btn get_in_touch my-2">
+                <button class="btn main_button my-2">
                     <i class="fa-solid fa-envelope text-secondary"></i>
                     <a href="mailto:abdellahkarani@gmail.com" class="text-phone text-computer ms-2 fw-semibold text-secondary">Get in touch</a>
                 </button>
@@ -162,7 +161,12 @@
                             JavaScript, and SASS. They focus on building different features and layouts to practice web development skills.
                         </p>
                     </div>
-                    <p class="languages">HTML5, CSS3, Sass, JavaScript</p>
+                    <div class="languages d-flex justify-content-start align-items-center">
+                        <button class="langauge yellow_btn">JavaScript</button>
+                        <button class="langauge green_btn">Sass</button>
+                        <button class="langauge blue_btn">HTML5</button>
+                        <button class="langauge red_btn">CSS3</button>
+                    </div>
                 </div>
                 <div class="card">
                     <div class="git_projects d-flex justify-content-between align-items-center">
@@ -177,31 +181,54 @@
                         <p class="desc">It is a simple dashboard using my own CSS 
                             framework and contains separate files for each section.</p>
                     </div>
-                    <p class="languages">HTML5, CSS3</p>
+                    <div class="languages d-flex justify-content-start align-items-center">
+                        <button class="langauge green_btn">HTML5</button>
+                        <button class="langauge blue_btn">CSS3</button>
+                    </div>
                 </div>
             </div>
+            <div class="more_projects my-5 d-flex justify-content-center align-items-center cursor-pointer">
+                <i class="fa-solid fa-plus fs-5"></i>
+            </div>
         </section>
-        <!-- Start Resume -->
+        <!-- Start Contact & Resume -->
         <section id="resume" class="page resume container_dektop container_phone">
             <p class="title">
-                <span>📍 Resume</span>
+                <span>📍 Contact</span>
             </p>
-            <button onclick="window.open('resume.pdf')" class="open_resume text-computer text-phone">
-                <i class="fa-solid fa-file"></i>
-                <a target="_blank" href="#" class="text-phone">Open Resume</a>
-            </button>
+            <main class="d-flex justify-content-between align-items-center">
+                <div class="resume">
+                    <p class="fw-semibold">lets connect</p>
+                    <button onclick="window.open('resume.pdf')" class="btn main_button my-2">
+                        <i class="fa-solid fa-file text-secondary"></i>
+                        <a class="text-phone text-computer ms-2 fw-semibold text-secondary">Open Resume</a>
+                    </button>
+                </div>
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="feedback" class="form-label">Message</label>
+                      <textarea class="form-control" id="feedback" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </main>
         </section>
+        <br><hr>
         <!-- Start Footer -->
-        <footer class="container_dektop container_phone">
-            <p>Copyright ©<span class="date">2024</span>| All rights reserved.</p>
+        <footer class="container_dektop container_phone d-flex justify-content-between align-items-center">
+            <p>Copyright ©<span class="date">2025</span> | All rights reserved.</p>
             <div class="social-icons">
-                <a target="_blank" href="https://github.com/KaraniAbdellah">
+                <a target="_blank" class="text-secondary" href="https://github.com/KaraniAbdellah">
                     <i class="text-computer text-phone fa-brands fa-github"></i>
                 </a>
-                <a target="_blank" href="https://www.linkedin.com/in/abdellah-karani-965928294/">
+                <a target="_blank" class="text-secondary mx-2" href="https://www.linkedin.com/in/abdellah-karani-965928294/">
                     <i class="text-computer text-phone fa-brands fa-linkedin"></i>
                 </a>
-                <a target="_blank" href="https://x.com/karani66745">
+                <a target="_blank" class="text-secondary" href="https://x.com/karani66745">
                     <i class="text-computer text-phone fa-brands fa-x-twitter"></i>
                 </a>
             </div>
@@ -214,6 +241,3 @@
 
 </body>
 </html>
-
-
-<!-- 📧 -->

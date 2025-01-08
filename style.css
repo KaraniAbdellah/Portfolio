@@ -118,12 +118,35 @@ img {
 /* End Helper Classes */
 
 /* Start Buttons Themes */
-.red_btn {
-    font-size: 15px;
-    background-color: rgba(255, 0, 0, 0.046);
+.red_btn,  .green_btn, .blue_btn, .yellow_btn {
+    font-size: 12px;
     border-radius: var(--border-radius);
     padding: 5px;
     margin-right: 10px;
+}
+.green_btn {
+    color: #2ecc71;
+    background-color: #a1e6a138;
+}
+.red_btn {
+    color: #ff6958;
+    background-color: #f2b1b12a;
+}
+.blue_btn {
+    color: #4aa4df;
+    background-color: #a2c8f924;
+}
+.yellow_btn {
+    color: #a4b824;
+    background-color: #e3e6a138;
+}
+.main_button {
+    padding: 20px 40px;
+    border: 2px solid var(--main-color-light);
+    background-color: transparent;
+}
+.main_button:hover {
+    background-color: var(--bg-hover-button);
 }
 /* End Buttons Themes */
 
@@ -137,12 +160,14 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    margin: 0 100px;
 }
 @media (max-width: 992px) {
     header {
         right: 50%;
         transform: translateX(50%);
         width: calc(100% - 80px);
+        margin: 0 0 !important;
     }
 }
 @media (max-width: 767px) {
@@ -192,14 +217,6 @@ section.intro .links .social_icons a:hover {
 }
 section.intro .main_info .name {
     font-size: 60px;
-}
-.get_in_touch {
-    padding: 20px 40px;
-    border: 2px solid var(--main-color-light);
-    background-color: transparent;
-}
-.get_in_touch:hover {
-    background-color: var(--bg-hover-button);
 }
 .hello-icon {
     animation-name: say-hello;
@@ -310,7 +327,7 @@ section.about_me ul.techs li img {
 
 /* Start Experience */
 section.experience {
-
+    /* height: calc(100vh - 100px); */
 }
 section.experience main .expriences {
     width: 60%;
@@ -345,6 +362,9 @@ section.experience main .image img {
 
 
 /* Start Projects */
+section.projects {
+    /* height: calc(100vh - 100px); */
+}
 section.projects .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -381,13 +401,53 @@ section.projects .card .languages {
     margin-top: 10px;
     flex-wrap: wrap;
 }
-/* section.projects .card .languages .langauge { */
-    /* font-size: 15px;
-    background-color: red;
-    border-radius: var(--border-radius);
-    padding: 5px;
-    margin-right: 10px;
-} */
-
+section.projects .more_projects {
+    text-align: center;
+    border: 2px solid var(--main-color-light);;
+    border-radius: 50%; padding: 20px;
+    width: 50px; height: 50px;
+    margin: auto; cursor: pointer;
+    transition: var(--transition);
+}
+section.projects .more_projects:hover {
+    background-color: var(--bgcolor-tech);
+}
 /* End Projects */
 
+
+/* Start Resume & Connect */
+section.resume main .resume {
+    width: 30%;
+}
+section.resume main .resume p {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+section.resume main form {
+    width: 60%;
+}
+@media (max-width: 767px) {
+    section.resume main .resume {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    section.resume main form, section.resume main .resume {
+        width: 100%;
+    }
+    section.resume main {
+        flex-direction: column !important;
+    }
+}
+
+/* Start Footer */
+footer {
+    margin-top: 100px !important;
+}
+footer .social-icons a {
+    transition: var(--transition);
+}
+footer .social-icons a:hover {
+    color: var(--main-color-light) !important;
+    transform: scale(1.2);
+}
+/* End Footer */
