@@ -188,10 +188,11 @@ header {
         display: block !important;
     }
 }
-.nav_links a {
+.nav_links a, .nav_links p.ele_mode {
     transition: var(--transition);
+    cursor: pointer;
 }
-.nav_links a:hover {
+.nav_links a:hover, .nav_links p.ele_mode:hover {
     color: var(--main-color-light) !important;
 }
 /* End Header */
@@ -454,13 +455,13 @@ footer .social-icons a:hover {
 
 
 
-
+/* 
 body {
     background-color: rgb(33 39 55);
 }
 .text-secondary {
     color: white !important;
-}
+} */
 
 
 
