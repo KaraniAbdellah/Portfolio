@@ -416,25 +416,25 @@ section.projects .more_projects:hover {
 
 
 /* Start Resume & Connect */
-section.resume main .resume {
+section.contact main .resume {
     width: 30%;
 }
-section.resume main .resume p {
+section.contact main .resume p {
     font-size: 30px;
     margin-bottom: 20px;
 }
-section.resume main form {
+section.contact main form {
     width: 60%;
 }
 @media (max-width: 767px) {
-    section.resume main .resume {
+    section.contact main .resume {
         margin-bottom: 50px;
         text-align: center;
     }
-    section.resume main form, section.resume main .resume {
+    section.contact main form, section.contact main .resume {
         width: 100%;
     }
-    section.resume main {
+    section.contact main {
         flex-direction: column !important;
     }
 }
@@ -451,3 +451,17 @@ footer .social-icons a:hover {
     transform: scale(1.2);
 }
 /* End Footer */
+
+
+
+
+body {
+    background-color: rgb(33 39 55);
+}
+.text-secondary {
+    color: white !important;
+}
+
+
+
+
