@@ -30,11 +30,11 @@
                 </p>
             </div>
             <div class="nav_links hidden-phone d-flex text-center">
-                <a class="text-secondary fw-semibold" href="#">home</a>
-                <a class="ms-3 text-secondary fw-semibold" href="#about_me">about_me</a>
-                <a class="ms-3 text-secondary fw-semibold" href="#experience">experience</a>
-                <a class="ms-3 text-secondary fw-semibold" href="#projects">projects</a>
-                <a class="ms-3 text-secondary fw-semibold" href="#resume">resume</a>
+                <p class="text-secondary fw-semibold" id="intro">home</p>
+                <p class="ms-3 text-secondary fw-semibold" id="about_me">about_me</p>
+                <p class="ms-3 text-secondary fw-semibold" id="experience">experience</p>
+                <p class="ms-3 text-secondary fw-semibold" id="projects">projects</p>
+                <p class="ms-3 text-secondary fw-semibold" id="contact">resume</p>
                 <p class="ele_mode ms-3 text-secondary fw-semibold"><i class="fa-solid fa-moon"></i></p>
             </div>
         </header>
@@ -73,22 +73,22 @@
         </section>
         <!-- Start About_me Section -->
         <section id="about_me" class="page about_me container_dektop container_phone">
-            <p class="title text-secondary"><span>🧑‍💻 Abount me</span></p>
+            <p class="title text-secondary"><span>🧑‍💻 About me</span></p>
             <p class="desc_about_me text-phone text-computer text-secondary">Hi! I'm Abdellah Karani, a student 
                 studying computer science at university in Beni Mellal, Morocco.
                 <br> Currently I am working with this technologies:
             </p>
             <ul class="techs p-0">
-                <li class="d-flex justify-content-center align-items-center flex-column"> <img src="images/html.webp" alt=""><p>HTML5</p> </li>
-                <li class="d-flex justify-content-center align-items-center flex-column"> <img src="images/css.webp" alt=""><p>CSS3</p> </li>
-                <li class="d-flex justify-content-center align-items-center flex-column"> <img src="images/sass.webp" alt=""><p>Sass</p> </li>
-                <li class="d-flex justify-content-center align-items-center flex-column"> <img src="images/bootstrap.webp" alt=""><p>Bootstrap</p> </li>
-                <li class="d-flex justify-content-center align-items-center flex-column"> <img src="images/js.webp" alt=""><p>JavaScript ES6</p> </li>
-                <li class="d-flex justify-content-center align-items-center flex-column"> <img src="images/git.webp" alt=""><p>Git</p> </li>
-                <li class="d-flex justify-content-center align-items-center flex-column"> <img src="images/c.webp" alt="">  <p>C programming language</p> </li>
-                <li class="d-flex justify-content-center align-items-center flex-column"> <img src="images/java.webp" alt=""><p>Java</p> </li>
+                <li class="light text-secondary d-flex justify-content-center align-items-center flex-column"> <img src="images/html.webp" alt=""><p>HTML5</p> </li>
+                <li class="light text-secondary d-flex justify-content-center align-items-center flex-column"> <img src="images/css.webp" alt=""><p>CSS3</p> </li>
+                <li class="light text-secondary d-flex justify-content-center align-items-center flex-column"> <img src="images/sass.webp" alt=""><p>Sass</p> </li>
+                <li class="light text-secondary d-flex justify-content-center align-items-center flex-column"> <img src="images/bootstrap.webp" alt=""><p>Bootstrap</p> </li>
+                <li class="light text-secondary d-flex justify-content-center align-items-center flex-column"> <img src="images/js.webp" alt=""><p>JavaScript ES6</p> </li>
+                <li class="light text-secondary d-flex justify-content-center align-items-center flex-column"> <img src="images/git.webp" alt=""><p>Git</p> </li>
+                <li class="light text-secondary d-flex justify-content-center align-items-center flex-column"> <img src="images/c.webp" alt="">  <p>C programming language</p> </li>
+                <li class="light text-secondary d-flex justify-content-center align-items-center flex-column"> <img src="images/java.webp" alt=""><p>Java</p> </li>
             </ul>
-            <p class="text-phone text-computer">When I'm away, I'm usually reading a book or outside enjoying sharing my knowledge.</p>
+            <p class="text-secondary text-computer">When I'm away, I'm usually reading a book or outside enjoying sharing my knowledge.</p>
         </section>
         <!-- Start Experience Section -->
         <section id="experience" class="page experience container_dektop container_phone">
@@ -127,7 +127,7 @@
                 <span>📂 Projects</span>
             </p>
             <div class="cards">
-                <div class="card">
+                <div class="card light">
                     <div class="git_projects d-flex justify-content-between align-items-center">
                         <i class= "fa-solid fa-folder"></i>
                         <div class="watch_project">
@@ -136,8 +136,8 @@
                         </div>
                     </div>
                     <div class="info_project">
-                        <h4 class="name">Min shell</h4>
-                        <p class="desc">
+                        <h4 class="name text-secondary">Min shell</h4>
+                        <p class="text-secondary desc">
                             A mini shell project in C lets users type commands in a terminal.
                             It reads the commands, runs them, and shows the results, similar to a regular shell.
                         </p>
@@ -147,7 +147,7 @@
                         <button class="langauge green_btn">Sheel</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card light">
                     <div class="git_projects d-flex justify-content-between align-items-center">
                         <i class= "fa-solid fa-folder"></i>
                         <div class="watch_project">
@@ -156,8 +156,8 @@
                         </div>
                     </div>
                     <div class="info_project">
-                        <h4 class="name">Vanilla Projects</h4>
-                        <p class="desc">Vanilla projects are 30 small web projects made with HTML, CSS, 
+                        <h4 class="name text-secondary">Vanilla Projects</h4>
+                        <p class="text-secondary desc">Vanilla projects are 30 small web projects made with HTML, CSS, 
                             JavaScript, and SASS. They focus on building different features and layouts to practice web development skills.
                         </p>
                     </div>
@@ -168,7 +168,7 @@
                         <button class="langauge red_btn">CSS3</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card light">
                     <div class="git_projects d-flex justify-content-between align-items-center">
                         <i class= "fa-solid fa-folder"></i>
                         <div class="watch_project">
@@ -177,8 +177,44 @@
                         </div>
                     </div>
                     <div class="info_project">
-                        <h4 class="name">Dashboard</h4>
-                        <p class="desc">It is a simple dashboard using my own CSS 
+                        <h4 class="name text-secondary">Dashboard</h4>
+                        <p class="text-secondary desc">It is a simple dashboard using my own CSS 
+                            framework and contains separate files for each section.</p>
+                    </div>
+                    <div class="languages d-flex justify-content-start align-items-center">
+                        <button class="langauge green_btn">HTML5</button>
+                        <button class="langauge blue_btn">CSS3</button>
+                    </div>
+                </div>
+                <div class="card hidden-card light">
+                    <div class="git_projects d-flex justify-content-between align-items-center">
+                        <i class= "fa-solid fa-folder"></i>
+                        <div class="watch_project">
+                            <a class="text-secondary mx-1" href="https://github.com/KaraniAbdellah/Dashboard"><i class=" github fa-brands fa-github"></i></a>
+                            <a class="text-secondary" href="https://karaniabdellah.github.io/Dashboard/"><i class="link fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="info_project">
+                        <h4 class="name text-secondary">Dashboard</h4>
+                        <p class="text-secondary desc">It is a simple dashboard using my own CSS 
+                            framework and contains separate files for each section.</p>
+                    </div>
+                    <div class="languages d-flex justify-content-start align-items-center">
+                        <button class="langauge green_btn">HTML5</button>
+                        <button class="langauge blue_btn">CSS3</button>
+                    </div>
+                </div>
+                <div class="card hidden-card light">
+                    <div class="git_projects d-flex justify-content-between align-items-center">
+                        <i class= "fa-solid fa-folder"></i>
+                        <div class="watch_project">
+                            <a class="text-secondary mx-1" href="https://github.com/KaraniAbdellah/Dashboard"><i class=" github fa-brands fa-github"></i></a>
+                            <a class="text-secondary" href="https://karaniabdellah.github.io/Dashboard/"><i class="link fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="info_project">
+                        <h4 class="name text-secondary">Dashboard</h4>
+                        <p class="text-secondary desc">It is a simple dashboard using my own CSS 
                             framework and contains separate files for each section.</p>
                     </div>
                     <div class="languages d-flex justify-content-start align-items-center">
@@ -187,8 +223,8 @@
                     </div>
                 </div>
             </div>
-            <div class="more_projects my-5 d-flex justify-content-center align-items-center cursor-pointer">
-                <i class="fa-solid fa-plus fs-5"></i>
+            <div class="more_projects light my-5 d-flex justify-content-center align-items-center cursor-pointer">
+                <i class="text-secondary fa-solid fa-plus fs-5"></i>
             </div>
         </section>
         <!-- Start Contact -->
@@ -220,7 +256,7 @@
         <br><hr>
         <!-- Start Footer -->
         <footer class="container_dektop container_phone d-flex justify-content-between align-items-center">
-            <p>Copyright ©<span class="date">2025</span> | All rights reserved.</p>
+            <p class="text-secondary">Copyright ©<span class="date">2025</span> | All rights reserved.</p>
             <div class="social-icons">
                 <a target="_blank" class="text-secondary" href="https://github.com/KaraniAbdellah">
                     <i class="text-computer text-phone fa-brands fa-github"></i>

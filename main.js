@@ -24,10 +24,26 @@ $(document).ready(function () {
     let All_text = $(".text-secondary");
     let main_button = $(".main_button");
     let nav_item = $(".nav_item");
+    let techs_li = $(".techs li");
+    let cards = $(".cards .card");
+    let btn_more_projects = $(".more_projects");
     ele_mode.on("click", function() {
         // Change the Theme for main_button
         main_button.toggleClass("dark");
         main_button.toggleClass("light");
+        // Change the Theme for Technology Card
+        techs_li.each(function() {
+            $(this).toggleClass("light");
+            $(this).toggleClass("dark");
+        });
+        // Change the Theme for Technology Card
+        cards.each(function() {
+            $(this).toggleClass("light");
+            $(this).toggleClass("dark");
+        });
+        // Change the Color more_projects button
+        btn_more_projects.toggleClass("light");
+        btn_more_projects.toggleClass("dark");
         if ($("body").hasClass("light")) {
             // Change the icon to sun
             ele_mode.html(`<i class="fa-solid fa-sun"></i>`);
@@ -62,20 +78,57 @@ $(document).ready(function () {
 
     // Scroll Down
     nav_item.on("click", function() {
-        console.log($("section#about_me"));
         $("html, body").animate({
             scrollTop: $("section#about_me").offset().top - 100
         }, 100);
     });
 
     // Scroll Between Sections
-    let home = $("section#intro");
-    let about_me = $("section#about_me");
-    let experience = $("section#experience");
-    let projects = $("section#projects");
-    let contact = $("section#contact");
+    let section_links = $(".nav_links  p");
+    section_links.each(function() {
+        $(this).on("click", function() {
+            let section_id = `section#${$(this).attr("id")}`;
+            $("html, body").animate({
+                scrollTop: $(section_id).offset().top - 100
+            }, 100);
+        });
+    });
+
+    // let sections = $("section");
+    // console.log($("section#about_me").offset().top);
+    // $(document).on("scroll", function () {
+    //     let sections = $("section");
+    //     sections.each(function () {
+    //         let ele_id = $(`.nav_links p#${$(this).attr("id")}`);
+    //         console.log(ele_id);
+    //         if (window.scrollY + 120 >= $(this).offset().top) {
+    //             ele_id.addClass("clicked");
+    //         } else {
+    //             ele_id.removeClass("clicked");
+    //         }
+    //     });
+    // });
+
+    // Show More Projects By Click to PLus
+    let hidden_cards = $(".hidden-card");
+    let more_projects = $(".more_projects");
+    more_projects.click(function () {
+        hidden_cards.each(function() {
+            console.log($(this));
+            $(this).removeClass("hidden-cards");
+        })
+    });
+
+
 
     
+    
+
+
+
+
+
+
     
 
 

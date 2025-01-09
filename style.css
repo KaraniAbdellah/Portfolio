@@ -112,10 +112,20 @@ img {
     --box-shadow: inset rgba(0, 0, 0, 0.15) 19px 20px 12px 3px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
     --line-height: 1.9;
 
-    --bgcolor-tech: #f5f5f5;
-    --bgcolor-tech-hover: #ebebeb;
-}
+    /* Techs Colors */
+    --bgcolor-tech-light: #f5f5f5;
+    --bgcolor-tech-dark: #29384f5c;
+    --bgcolor-tech-hover-light: #ebebeb;
+    --bgcolor-tech-hover-dark: #3a4f7011;
 
+    /* Cards Color */
+    --bgcolor-card-light: #f5f5f5;
+    --bgcolor-card-dark: #29384f5c;
+
+    /* More Project Colors [Button] */
+    --more-projects-color-light: #f3f3f3bd;
+    --more-projects-color-dark: #293453be;
+}
 /* End Helper Classes */
 
 /* Start Buttons Themes */
@@ -198,11 +208,14 @@ header {
         display: block !important;
     }
 }
-.nav_links a, .nav_links p.ele_mode {
+.nav_links p {
     transition: var(--transition);
     cursor: pointer;
 }
-.nav_links a:hover, .nav_links p.ele_mode:hover {
+.nav_links p:hover, .nav_links p.ele_mode:hover {
+    color: var(--main-color-light) !important;
+}
+.nav_links p.clicked {
     color: var(--main-color-light) !important;
 }
 /* End Header */
@@ -300,12 +313,17 @@ section.about_me ul.techs li {
     padding: 20px !important;
     border-radius: var(--border-radius);
     cursor: pointer;
-    background-color: var(--bgcolor-tech);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
     z-index: 100;
     height: 140px !important;
+}
+section.about_me ul.techs li.light {
+    background-color: var(--bgcolor-tech-light);
+}
+section.about_me ul.techs li.dark {
+    background-color: var(--bgcolor-tech-dark);
 }
 section.about_me ul.techs li::before {
     content: "";
@@ -318,8 +336,13 @@ section.about_me ul.techs li::before {
 section.about_me ul.techs li:hover::before {
     width: 100%; height: 100%;
     bottom: 0; left: 0;
-    background-color: var(--bgcolor-tech-hover);
     border-radius: 0%;
+}
+section.about_me ul.techs li.light:hover::before {
+    background-color: var(--bgcolor-tech-hover-light);
+}
+section.about_me ul.techs li.dark:hover::before {
+    background-color: var(--bgcolor-tech-hover-dark);
 }
 section.about_me ul.techs li img {
     width: 50px;
@@ -385,7 +408,15 @@ section.projects .cards {
 }
 section.projects .cards .card {
     padding: 10px;
-    background-color: var(--bgcolor-tech);
+}
+section.projects .cards .hidden-card {
+    display: none !important;
+}
+section.projects .cards .card.light {
+    background-color: var(--bgcolor-card-light);
+}
+section.projects .cards .card.dark {
+    background-color: var(--bgcolor-card-dark);
 }
 section.projects .card .git_projects {
     margin: 0 0 20px;
@@ -406,14 +437,17 @@ section.projects .card .languages {
 }
 section.projects .more_projects {
     text-align: center;
-    border: 2px solid var(--main-color-light);;
+    border: 2px solid var(--main-color-light);
     border-radius: 50%; padding: 20px;
     width: 50px; height: 50px;
     margin: auto; cursor: pointer;
     transition: var(--transition);
 }
-section.projects .more_projects:hover {
-    background-color: var(--bgcolor-tech);
+section.projects .more_projects.light:hover {
+    background-color: var(--more-projects-color-light);
+}
+section.projects .more_projects.dark:hover {
+    background-color: var(--more-projects-color-dark);
 }
 /* End Projects */
 
