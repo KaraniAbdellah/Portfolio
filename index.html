@@ -41,7 +41,7 @@
         <!-- Start Introduction Section -->
         <section id="intro" class="page intro container_dektop container_phone">
             <div class="main_info">
-                <p class="name fw-semibold my-2 text-secondary">Hello! I'm <span class="auto-type">Abdellah</span></p>
+                <p class="name fw-semibold my-2 text-secondary">Hello! I'm <span class="auto-type-name">Abdellah</span></p>
                 <div class="info">
                     <p class="text-computer text-phone text-secondary">I'm software engineer from Morocco 🇲🇦, currently in my third year of university 🎓 (Licence).
                         I am a full stack developer working with JavaScript and enjoy sharing knowledge 
@@ -234,22 +234,23 @@
             </p>
             <main class="d-flex justify-content-between align-items-center">
                 <div class="resume">
-                    <p class="fw-semibold text-secondary">lets connect</p>
+                    <p class="fw-semibold text-secondary">let's <span class="auto-type-connect"></span></p>
                     <button onclick="window.open('resume.pdf')" class="btn main_button light my-2">
                         <i class="fa-solid fa-file text-secondary"></i>
                         <a class="text-phone text-computer ms-2 fw-semibold text-secondary">Open Resume</a>
                     </button>
                 </div>
+                <!-- action="https://formspree.io/f/xzzzkegb" method="post" -->
                 <form action="https://formspree.io/f/xzzzkegb" method="post">
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label text-secondary">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                      <input type="email" class="form-control email_input" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                     </div>
                     <div class="mb-3">
                       <label for="feedback" class="form-label text-secondary">Message</label>
-                      <textarea class="form-control" id="feedback" rows="4" required></textarea>
+                      <textarea class="form-control textarea_input" id="feedback" rows="4" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <p type="submit" class="btn btn-primary submit_btn">Submit</p>
                   </form>
             </main>
         </section>

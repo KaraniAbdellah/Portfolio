@@ -94,6 +94,7 @@ $(document).ready(function () {
         });
     });
 
+    // Custom The Change COlor For Header
     // let sections = $("section");
     // console.log($("section#about_me").offset().top);
     // $(document).on("scroll", function () {
@@ -112,11 +113,43 @@ $(document).ready(function () {
     // Show More Projects By Click to PLus
     let hidden_cards = $(".hidden-card");
     let more_projects = $(".more_projects");
+    console.log(hidden_cards);
     more_projects.click(function () {
         hidden_cards.each(function() {
-            console.log($(this));
-            $(this).removeClass("hidden-cards");
-        })
+            $(this).removeClass("hidden-card");
+        });
+        more_projects.addClass("hidden-phone").addClass("hidden-desktop");
+    });
+
+    // Generate a Message for Submission
+    let submit_btn = $(".submit_btn");
+    let email_input = $(".email_input");
+    let textarea_input = $(".textarea_input");
+    submit_btn.click(function () {
+        if (email_input.val() != "" && textarea_input.val() != "") {
+            submit_btn.text("Submitted");
+            submit_btn.addClass("btn-success");
+            submit_btn.removeClass("btn-primary");
+            setInterval(function() {
+                submit_btn.text("Submit");
+                submit_btn.removeClass("btn-success");
+                submit_btn.addClass("btn-primary");
+            }, 2000);
+        }
+    });
+
+    // Animation for name & Connect
+    var typed = new Typed(".auto-type-name", {
+        strings: ["Moroccan", "Abdellah"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: false,
+    });
+    var typed = new Typed(".auto-type-connect", {
+        strings: ["Drink☕", "Improve", "Change"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true,
     });
 
 
