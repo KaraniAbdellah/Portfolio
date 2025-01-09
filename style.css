@@ -62,10 +62,10 @@ i {
     display: block;
 }
 
-.page {
+/* .page {
     position: relative;
     z-index: 1;
-}
+} */
 img {
     width: 100px;
 }
@@ -104,7 +104,8 @@ img {
     --main-color-light: #00d4a1;
     --main-color-dark: #64ffda;
     --main-bgcolor-dark: #64ffda;
-    --bg-hover-button: #f3f3f3bd;
+    --bg-hover-button-light: #f3f3f3bd;
+    --bg-hover-button-dark: #293453be;
     --grey: #8d8d8d;
     --transition: 0.3s;
     --border-radius: 5px;
@@ -145,8 +146,17 @@ img {
     border: 2px solid var(--main-color-light);
     background-color: transparent;
 }
-.main_button:hover {
-    background-color: var(--bg-hover-button);
+.main_button.light:hover {
+    background-color: var(--bg-hover-button-light);
+}
+.main_button.dark:hover {
+    background-color: var(--bg-hover-button-dark);
+}
+@media (max-width: 767px) {
+    .main_button {
+        padding: 10px 20px;
+        background-color: transparent;
+    }
 }
 /* End Buttons Themes */
 
@@ -239,14 +249,6 @@ section.intro .main_info .name {
 
 @media (max-width: 767px) {
     section.intro .main_info .name {font-size: 40px;}
-    .get_in_touch {
-        padding: 10px 20px;
-        border: 2px solid var(--main-color-light);
-        background-color: transparent;
-    }
-    .get_in_touch:hover {
-        background-color: var(--bg-hover-button);
-    }
 }
 .nav_item {
     width: 100%;
