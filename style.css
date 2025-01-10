@@ -257,22 +257,33 @@ section.intro {
     margin-top: 150px !important;
     height: calc(100vh - 100px);
 }
-section.intro .main_info {
+section.intro main .main_info {
     width: 60%;
 }
+section.intro main .image {
+    width: 35%;
+}
+section.intro main .image img {
+    width: 320px;
+    border-radius: 20px;
+}
 @media (max-width: 992px) {
-    section.intro .main_info {
+    section.intro main .main_info {
         width: 100%;
     }
+    section.intro main .image {
+        display: none !important;
+    }
+}
+section.intro .main_info .name {
+    font-size: 60px;
 }
 section.intro .links .social_icons a {transition: var(--transition);}
 section.intro .links .social_icons a:hover {
     color: var(--main-color-light) !important;
     transform: scale(1.2) !important;
 }
-section.intro .main_info .name {
-    font-size: 60px;
-}
+
 .hello-icon {
     animation-name: say-hello;
     animation-duration: 1s;
@@ -389,19 +400,19 @@ section.experience {
 section.experience main .expriences {
     width: 60%;
 }
+section.experience main .image {
+    width: 30%;
+}
+section.experience main .image img {
+    width: 350px;
+}
 section.experience main .experience-item .date_present {
     color: var(--main-color-light);
 }
 section.experience .experience-item .info {
     font-size: 17px;
 }
-section.experience main .image {
-    width: 30%;
-}
-section.experience main .image img {
-    width: 100%;
-}
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     section.experience main {
         flex-direction: column;
     }
@@ -413,6 +424,10 @@ section.experience main .image img {
         order: 1;
         width: 100%;
         margin-bottom: 10px;
+        margin-bottom: 40px;
+    }
+    section.experience main .image img {
+        width: 100%;
     }
 }
 /* End Experience */
