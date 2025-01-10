@@ -101,18 +101,23 @@ $(document).ready(function () {
         });
     });
 
-    // Custom The Change COlor For Header
+    // Custom The Change Color For Header
     // let sections = $("section");
+    // console.log($("section#contact").offset().top);
     // $(document).on("scroll", function () {
     //     let scrollPosition = window.scrollY + 120;
     
     //     sections.each(function () {
     //         let sectionId = $(this).attr("id");
     //         let ele_id = $(`.nav_links p#${sectionId}`);
-            
     //         if (scrollPosition >= $(this).offset().top) {
     //             $(".nav_links p").removeClass("clicked");
     //             ele_id.addClass("clicked");
+    //         } else if (scrollPosition >= 2630) {
+    //             let contact_link_ele = $(".nav_links p#contact");
+    //             let project_link_ele = $(".nav_links p#projects");
+    //             contact_link_ele.addClass("clicked");
+    //             project_link_ele.removeClass("clicked");
     //         }
     //     });
     // });
