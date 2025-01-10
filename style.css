@@ -218,7 +218,7 @@ header {
         right: 50%;
         transform: translateX(50%);
         width: calc(100% - 80px);
-        margin: 0 0 !important;
+        margin: 0 !important;
     }
 }
 @media (max-width: 767px) {
