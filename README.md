@@ -9,4 +9,4 @@ I usually work on projects that cover the fundamentals. 💡
 
 Let’s connect and grow together. 🌱
 
-Check out my portfolio: <a href="https://karaniabdellah.github.io/Portfolio/"></a>
+Check out my portfolio: <a href="https://karaniabdellah.github.io/Portfolio/">abdellah karani</a>
