@@ -263,10 +263,18 @@ section.intro main .main_info {
 section.intro main .image {
     width: 35%;
 }
+
 section.intro main .image img {
-    width: 320px;
+    width: 300px;
     border-radius: 20px;
+    box-shadow: var(--main-bgcolor-dark) -5px -5px 0px;
+    transition: var(--transition);
 }
+section.intro main .image:hover img {
+    box-shadow: var(--main-bgcolor-dark) -15px -10px 0px;
+}
+
+
 @media (max-width: 992px) {
     section.intro main .main_info {
         width: 100%;
@@ -547,10 +555,18 @@ footer .social-icons a:hover {
 .name_input.dark::placeholder, .textarea_input.dark::placeholder  {
     color: white !important;
 }
-
-
 /* End Contact */
 
+/* Start Footer */
+@media (max-width: 767px) {
+    footer {
+        flex-direction: column !important;
+    }
+    footer p {
+        margin-bottom: 20px;
+    }
+}
+/* end Footer */
 
 
 
