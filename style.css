@@ -134,15 +134,22 @@ img {
     /* More Project Colors [Button] */
     --more-projects-color-light: #f3f3f3bd;
     --more-projects-color-dark: #293453be;
+
+    /* Input Color for Contact */
+    --input-color-light: rgb(247, 247, 247);
+    --input-color-dark: #2934533a;
 }
 
 .auto-type-name {
     color: var(--main-color-dark);  
 }
+
 .auto-type-connect {
     color: white !important;
     /* background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%); */
-    background-image: linear-gradient(to right, #5C258D 0%, #4389A2  51%, #5C258D  100%);
+    /* background-image: linear-gradient(to right, #5C258D 0%, #4389A2  51%, #5C258D  100%); */
+    /* background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6  51%, #2BC0E4  100%); */
+    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%);
     padding: 0 10px;
     border-radius: 30px;
 }
@@ -515,6 +522,17 @@ footer .social-icons a:hover {
 
 
 /* Start Contact */
+.name_input.light, .textarea_input.light  {
+    background-color: var(--input-color-light);
+}
+.name_input.dark, .textarea_input.dark  {
+    background-color: var(--input-color-dark);
+    border: 1px solid #858585;
+}
+.name_input.dark::placeholder, .textarea_input.dark::placeholder  {
+    color: white !important;
+}
+
 
 /* End Contact */
 
