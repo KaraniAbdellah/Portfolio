@@ -27,6 +27,8 @@ $(document).ready(function () {
     let techs_li = $(".techs li");
     let cards = $(".cards .card");
     let btn_more_projects = $(".more_projects");
+    let name_input = $(".name_input");
+    let textarea_input = $(".textarea_input");
     ele_mode.on("click", function() {
         // Change the Theme for main_button
         main_button.toggleClass("dark");
@@ -44,6 +46,11 @@ $(document).ready(function () {
         // Change the Color more_projects button
         btn_more_projects.toggleClass("light");
         btn_more_projects.toggleClass("dark");
+        // Change The Input Background
+        name_input.toggleClass("light");
+        name_input.toggleClass("dark");
+        textarea_input.toggleClass("dark");
+        textarea_input.toggleClass("light");
         if ($("body").hasClass("light")) {
             // Change the icon to sun
             ele_mode.html(`<i class="fa-solid fa-sun"></i>`);
@@ -94,18 +101,23 @@ $(document).ready(function () {
         });
     });
 
-    // Custom The Change COlor For Header
+    // Custom The Change Color For Header
     // let sections = $("section");
-    // console.log($("section#about_me").offset().top);
+    // console.log($("section#contact").offset().top);
     // $(document).on("scroll", function () {
-    //     let sections = $("section");
+    //     let scrollPosition = window.scrollY + 120;
+    
     //     sections.each(function () {
-    //         let ele_id = $(`.nav_links p#${$(this).attr("id")}`);
-    //         console.log(ele_id);
-    //         if (window.scrollY + 120 >= $(this).offset().top) {
+    //         let sectionId = $(this).attr("id");
+    //         let ele_id = $(`.nav_links p#${sectionId}`);
+    //         if (scrollPosition >= $(this).offset().top) {
+    //             $(".nav_links p").removeClass("clicked");
     //             ele_id.addClass("clicked");
-    //         } else {
-    //             ele_id.removeClass("clicked");
+    //         } else if (scrollPosition >= 2630) {
+    //             let contact_link_ele = $(".nav_links p#contact");
+    //             let project_link_ele = $(".nav_links p#projects");
+    //             contact_link_ele.addClass("clicked");
+    //             project_link_ele.removeClass("clicked");
     //         }
     //     });
     // });
@@ -123,10 +135,8 @@ $(document).ready(function () {
 
     // Generate a Message for Submission
     let submit_btn = $(".submit_btn");
-    let email_input = $(".email_input");
-    let textarea_input = $(".textarea_input");
     submit_btn.click(function () {
-        if (email_input.val() != "" && textarea_input.val() != "") {
+        if (name_input.val() != "" && textarea_input.val() != "") {
             submit_btn.text("Submitted");
             submit_btn.addClass("btn-success");
             submit_btn.removeClass("btn-primary");
