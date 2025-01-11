@@ -34,39 +34,44 @@
                 <p class="ms-3 text-secondary fw-semibold" id="about_me">about_me</p>
                 <p class="ms-3 text-secondary fw-semibold" id="experience">experience</p>
                 <p class="ms-3 text-secondary fw-semibold" id="projects">projects</p>
-                <p class="ms-3 text-secondary fw-semibold" id="contact">resume</p>
+                <p class="ms-3 text-secondary fw-semibold" id="contact">contact</p>
                 <p class="ele_mode ms-3 text-secondary fw-semibold"><i class="fa-solid fa-moon"></i></p>
             </div>
         </header>
         <!-- Start Introduction Section -->
         <section id="intro" class="page intro container_dektop container_phone">
-            <div class="main_info">
-                <p class="name fw-semibold my-2 text-secondary">Hello! I'm <span class="auto-type-name">Abdellah</span></p>
-                <div class="info">
-                    <p class="text-computer text-phone text-secondary">I'm software engineer from Morocco 🇲🇦, currently in my third year of university 🎓 (Licence).
-                        I am a full stack developer working with JavaScript and enjoy sharing knowledge 
-                        through LinkedIn posts and writing articles. <span class="hello-icon">👋</span>
-                    </p>
-                </div>
-                <div class="links d-flex justify-content-between align-items-center">
-                    <p class="text-phone text-computer my-3 text-secondary">social links: </p>
-                    <div class="social_icons">
-                        <a class="text-secondary" target="_blank" href="https://github.com/KaraniAbdellah">
-                            <i class="text-computer text-phone fa-brands fa-github"></i>
-                        </a>
-                        <a class="mx-2 text-secondary" target="_blank" href="https://www.linkedin.com/in/abdellah-karani-965928294/">
-                            <i class="text-computer text-phone fa-brands fa-linkedin"></i>
-                        </a>
-                        <a class="text-secondary" target="_blank" href="https://x.com/karani66745">
-                            <i class="text-computer text-phone fa-brands fa-x-twitter"></i>
-                        </a>
+            <main class="d-flex justify-content-between align-items-center">
+                <div class="main_info">
+                    <p class="name fw-semibold my-2 text-secondary">Hello! I'm <span class="auto-type-name">Abdellah</span></p>
+                    <div class="info">
+                        <p class="text-computer text-phone text-secondary">I'm software engineer from Morocco 🇲🇦, currently in my third year of university 🎓 (Licence).
+                            I am a full stack developer working with JavaScript and enjoy sharing knowledge 
+                            through LinkedIn posts and writing articles. <span class="hello-icon">👋</span>
+                        </p>
                     </div>
+                    <div class="links d-flex justify-content-between align-items-center">
+                        <p class="text-phone text-computer my-3 text-secondary">social links: </p>
+                        <div class="social_icons">
+                            <a class="text-secondary" target="_blank" href="https://github.com/KaraniAbdellah">
+                                <i class="text-computer text-phone fa-brands fa-github"></i>
+                            </a>
+                            <a class="mx-2 text-secondary" target="_blank" href="https://www.linkedin.com/in/abdellah-karani-965928294/">
+                                <i class="text-computer text-phone fa-brands fa-linkedin"></i>
+                            </a>
+                            <a class="text-secondary" target="_blank" href="https://x.com/karani66745">
+                                <i class="text-computer text-phone fa-brands fa-x-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="btn main_button light  my-2">
+                        <i class="fa-solid fa-envelope text-secondary"></i>
+                        <a href="mailto:abdellahkarani@gmail.com" class="text-phone text-computer ms-2 fw-semibold text-secondary">Get in touch</a>
+                    </button>
                 </div>
-                <button class="btn main_button light  my-2">
-                    <i class="fa-solid fa-envelope text-secondary"></i>
-                    <a href="mailto:abdellahkarani@gmail.com" class="text-phone text-computer ms-2 fw-semibold text-secondary">Get in touch</a>
-                </button>
-            </div>
+                <div class="image">
+                    <img src="images/me.jpeg" alt="">
+                </div>
+            </main>
             <div class="nav_item">
                 <img src="images/arrow-scroll.png" alt="scroll image">
             </div>
@@ -195,27 +200,8 @@
                         </div>
                     </div>
                     <div class="info_project">
-                        <h4 class="name text-secondary">Dashboard</h4>
-                        <p class="text-secondary desc">It is a simple dashboard using my own CSS 
-                            framework and contains separate files for each section.</p>
-                    </div>
-                    <div class="languages d-flex justify-content-start align-items-center">
-                        <button class="langauge green_btn">HTML5</button>
-                        <button class="langauge blue_btn">CSS3</button>
-                    </div>
-                </div>
-                <div class="card hidden-card light">
-                    <div class="git_projects d-flex justify-content-between align-items-center">
-                        <i class= "fa-solid fa-folder"></i>
-                        <div class="watch_project">
-                            <a class="text-secondary mx-1" href="https://github.com/KaraniAbdellah/Dashboard"><i class=" github fa-brands fa-github"></i></a>
-                            <a class="text-secondary" href="https://karaniabdellah.github.io/Dashboard/"><i class="link fa-solid fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="info_project">
-                        <h4 class="name text-secondary">Dashboard</h4>
-                        <p class="text-secondary desc">It is a simple dashboard using my own CSS 
-                            framework and contains separate files for each section.</p>
+                        <h4 class="name text-secondary">Static Blog</h4>
+                        <p class="text-secondary desc">aji_taaraf Welcome to aji_taaraf - the first Moroccan blog sharing the latest in IT and technology! 🌐</p>
                     </div>
                     <div class="languages d-flex justify-content-start align-items-center">
                         <button class="langauge green_btn">HTML5</button>
@@ -243,12 +229,12 @@
                 <!-- action="https://formspree.io/f/xzzzkegb" method="post" -->
                 <form action="https://formspree.io/f/xzzzkegb" method="post">
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label text-secondary">Email address</label>
-                      <input type="email" class="form-control email_input" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                      <label for="name" class="form-label text-secondary">Your Name</label>
+                      <input type="text" placeholder="name..." class="form-control name_input light" id="name" required>
                     </div>
                     <div class="mb-3">
                       <label for="feedback" class="form-label text-secondary">Message</label>
-                      <textarea class="form-control textarea_input" id="feedback" rows="4" required></textarea>
+                      <textarea class="form-control textarea_input light" placeholder="write for me a message" id="feedback" rows="4" required></textarea>
                     </div>
                     <p type="submit" class="btn btn-primary submit_btn">Submit</p>
                   </form>
@@ -278,3 +264,6 @@
     <script src="main.js"></script>
 </body>
 </html>
+
+
+

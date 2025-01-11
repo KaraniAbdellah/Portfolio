@@ -517,6 +517,9 @@ section.contact main .resume p {
 section.contact main form {
     width: 60%;
 }
+section.contact main form input.dark, section.contact main form textarea.dark {
+    color: rgb(227, 227, 227);
+}
 @media (max-width: 767px) {
     section.contact main .resume {
         margin-bottom: 50px;
