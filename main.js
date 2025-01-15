@@ -149,18 +149,39 @@ $(document).ready(function () {
     });
 
     // Animation for name & Connect
-    var typed = new Typed(".auto-type-name", {
+    let typed1 = new Typed(".auto-type-name", {
         strings: ["Moroccan", "Abdellah"],
         typeSpeed: 150,
         backSpeed: 150,
-        loop: false,
+        loop: false
     });
-    var typed = new Typed(".auto-type-connect", {
+
+    let typed2 = new Typed(".auto-type-connect", {
         strings: ["Drink☕", "Improve", "Change"],
         typeSpeed: 150,
         backSpeed: 150,
         loop: true,
     });
+
+
+    
+
+    $(".submit_btn").click(function () {
+        console.log(name_input.val());
+        console.log(textarea_input.val());
+        if (name_input.val() == "") {
+            console.log("the filied name is required");
+            $(".message_input").text("this filied is required");
+        } else {
+            $(".message_input").text("");
+        }
+        if (textarea_input.val() == "") {
+            console.log("the filied name is required");
+            $(".message_textarea").text("this filied is required");
+        } else {
+            $(".message_textarea").text("");
+        }
+    })
 
 
 
