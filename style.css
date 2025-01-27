@@ -410,9 +410,18 @@ section.experience main .expriences {
 }
 section.experience main .image {
     width: 30%;
+    border-radius: 20px;
+    transition: var(--transition);
+
 }
 section.experience main .image img {
     width: 350px;
+    border-radius: 20px;
+    transition: var(--transition);
+    box-shadow: var(--main-bgcolor-dark) -5px -5px 0px;
+}
+section.experience main .image:hover img {
+    box-shadow: var(--main-bgcolor-dark) -10px -10px 0px;
 }
 section.experience main .experience-item .date_present {
     color: var(--main-color-light);
@@ -462,6 +471,21 @@ section.projects .cards {
 }
 section.projects .cards .card {
     padding: 10px;
+}
+section.projects .cards .image {
+    margin: 0 0 15px;
+    box-shadow: rgba(245, 206, 206, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border: #2ecc71 3px solid;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+section.projects .cards .image img {
+    width: 100%;
+    transition: var(--transition);
+}
+section.projects .cards .image:hover img {
+    transform: scale(1.1);
 }
 section.projects .cards .hidden-card {
     display: none !important;
@@ -535,7 +559,7 @@ section.contact main form input.dark, section.contact main form textarea.dark {
 
 /* Start Footer */
 footer {
-    margin-top: 100px !important;
+    margin-top: 30px !important;
 }
 footer .social-icons a {
     transition: var(--transition);
