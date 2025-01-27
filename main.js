@@ -29,7 +29,12 @@ $(document).ready(function () {
     let btn_more_projects = $(".more_projects");
     let name_input = $(".name_input");
     let textarea_input = $(".textarea_input");
-    ele_mode.on("click", function() {
+
+    if (window.localStorage.getItem("page_mode") == "dark") {
+        CommonChanges();
+        ToDark();
+    }
+    function CommonChanges() {
         // Change the Theme for main_button
         main_button.toggleClass("dark");
         main_button.toggleClass("light");
@@ -51,33 +56,45 @@ $(document).ready(function () {
         name_input.toggleClass("dark");
         textarea_input.toggleClass("dark");
         textarea_input.toggleClass("light");
+    }
+    function ToDark() {
+        // Change the icon to sun
+        ele_mode.html(`<i class="fa-solid fa-sun"></i>`);
+        // Change Text Color to White
+        All_text.each(function () {
+            $(this).removeClass("text-secondary");
+            $(this).css("color", "white");
+        });
+        // Change Body Color
+        $("body").css("background-color", "#212737");
+        // Change Body Class
+        $("body").removeClass("light");
+        // Change the Image Down
+        nav_item.html(`<img src="images/down-chevron.png" alt="scroll image">`);
+    }
+    function ToLight() {
+        // Change the icon to sun
+        ele_mode.html(`<i class="fa-solid fa-moon"></i>`);
+        // Change Text Color to White
+        All_text.each(function () {
+            $(this).addClass("text-secondary");
+        });
+        // Change Body Color
+        $("body").css("background-color", "white");
+        // Change Body Class
+        $("body").addClass("light");
+        // Change the Image Down
+        nav_item.html(`<img src="images/arrow-scroll.png" alt="scroll image">`);
+    }
+
+    ele_mode.on("click", function() {
+        CommonChanges();
         if ($("body").hasClass("light")) {
-            // Change the icon to sun
-            ele_mode.html(`<i class="fa-solid fa-sun"></i>`);
-            // Change Text Color to White
-            All_text.each(function () {
-                $(this).removeClass("text-secondary");
-                $(this).css("color", "white");
-            });
-            // Change Body Color
-            $("body").css("background-color", "#212737");
-            // Change Body Class
-            $("body").removeClass("light");
-            // Change the Image Down
-            nav_item.html(`<img src="images/down-chevron.png" alt="scroll image">`);
+            window.localStorage.setItem("page_mode", "dark");
+            ToDark();
         } else {
-            // Change the icon to sun
-            ele_mode.html(`<i class="fa-solid fa-moon"></i>`);
-            // Change Text Color to White
-            All_text.each(function () {
-                $(this).addClass("text-secondary");
-            });
-            // Change Body Color
-            $("body").css("background-color", "white");
-            // Change Body Class
-            $("body").addClass("light");
-            // Change the Image Down
-            nav_item.html(`<img src="images/arrow-scroll.png" alt="scroll image">`);
+            window.localStorage.setItem("page_mode", "light");
+            ToLight();
         }
 
     });
@@ -181,7 +198,9 @@ $(document).ready(function () {
         } else {
             $(".message_textarea").text("");
         }
-    })
+    });
+
+
 
 
 
