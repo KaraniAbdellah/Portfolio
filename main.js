@@ -20,92 +20,99 @@ $(document).ready(function () {
     });
 
     // Start Change Text Code
-    let ele_mode = $("p.ele_mode");
-    let All_text = $(".text-secondary");
-    let main_button = $(".main_button");
-    let nav_item = $(".nav_item");
-    let techs_li = $(".techs li");
+    let eleMode = $("p.ele_mode");
+    let allText = $(".text-secondary");
+    let mainButton = $(".main_button");
+    let navItem = $(".nav_item");
+    let techsList = $(".techs li");
     let cards = $(".cards .card");
-    let btn_more_projects = $(".more_projects");
-    let name_input = $(".name_input");
-    let textarea_input = $(".textarea_input");
+    let btnMoreProjects = $(".more_projects");
+    let nameInput = $(".name_input");
+    let textareaInput = $(".textarea_input");
+    let experInfo = $(".experience-item .info");
+    let experCards = $(".experience-item");
 
-    if (window.localStorage.getItem("page_mode") == "dark") {
-        CommonChanges();
-        ToDark();
+    if (window.localStorage.getItem("page_mode") === "dark") {
+        applyCommonChanges();
+        switchToDarkMode();
     }
-    function CommonChanges() {
-        // Change the Theme for main_button
-        main_button.toggleClass("dark");
-        main_button.toggleClass("light");
-        // Change the Theme for Technology Card
-        techs_li.each(function() {
-            $(this).toggleClass("light");
-            $(this).toggleClass("dark");
+
+    function applyCommonChanges() {
+        // Toggle Experience Cards
+        experCards.each(function () {
+            $(this).toggleClass("light dark");
         });
-        // Change the Theme for Technology Card
-        cards.each(function() {
-            $(this).toggleClass("light");
-            $(this).toggleClass("dark");
+
+        // Toggle Experience Info
+        experInfo.each(function () {
+            $(this).toggleClass("light dark");
         });
-        // Change the Color more_projects button
-        btn_more_projects.toggleClass("light");
-        btn_more_projects.toggleClass("dark");
-        // Change The Input Background
-        name_input.toggleClass("light");
-        name_input.toggleClass("dark");
-        textarea_input.toggleClass("dark");
-        textarea_input.toggleClass("light");
+
+        // Toggle Main Button Theme
+        mainButton.toggleClass("light dark");
+
+        // Toggle Technology List Items
+        techsList.each(function () {
+            $(this).toggleClass("light dark");
+        });
+
+        // Toggle Cards Theme
+        cards.each(function () {
+            $(this).toggleClass("light dark");
+        });
+
+        // Toggle More Projects Button
+        btnMoreProjects.toggleClass("light dark");
+
+        // Toggle Input Fields
+        nameInput.toggleClass("light dark");
+        textareaInput.toggleClass("light dark");
     }
-    function ToDark() {
-        // Change the icon to sun
-        ele_mode.html(`<i class="fa-solid fa-sun"></i>`);
+
+    function switchToDarkMode() {
+        // Change Icon to Sun
+        eleMode.html(`<i class="fa-solid fa-sun"></i>`);
+
         // Change Text Color to White
-        All_text.each(function () {
-            $(this).removeClass("text-secondary");
-            $(this).css("color", "white");
+        allText.each(function () {
+            $(this).removeClass("text-secondary").css("color", "white");
         });
-        // Change Body Color
-        $("body").css("background-color", "#212737");
-        // Change Body Class
-        $("body").removeClass("light");
-        // Change the Image Down
-        nav_item.html(`<img src="images/down-chevron.png" alt="scroll image">`);
+
+        // Set Body Background and Class
+        $("body").css("background-color", "#212737").removeClass("light");
+
+        // Update Nav Item Image
+        navItem.html(`<img src="images/down-chevron.png" alt="scroll image">`);
     }
-    function ToLight() {
-        // Change the icon to sun
-        ele_mode.html(`<i class="fa-solid fa-moon"></i>`);
-        // Change Text Color to White
-        All_text.each(function () {
+
+    function switchToLightMode() {
+        // Change Icon to Moon
+        eleMode.html(`<i class="fa-solid fa-moon"></i>`);
+
+        // Restore Text Secondary Class
+        allText.each(function () {
             $(this).addClass("text-secondary");
         });
-        // Change Body Color
-        $("body").css("background-color", "white");
-        // Change Body Class
-        $("body").addClass("light");
-        // Change the Image Down
-        nav_item.html(`<img src="images/arrow-scroll.png" alt="scroll image">`);
+
+        // Reset Body Background and Class
+        $("body").css("background-color", "white").addClass("light");
+
+        // Update Nav Item Image
+        navItem.html(`<img src="images/arrow-scroll.png" alt="scroll image">`);
     }
 
-    ele_mode.on("click", function() {
-        CommonChanges();
+    eleMode.on("click", function () {
+        applyCommonChanges();
+
         if ($("body").hasClass("light")) {
             window.localStorage.setItem("page_mode", "dark");
-            ToDark();
+            switchToDarkMode();
         } else {
             window.localStorage.setItem("page_mode", "light");
-            ToLight();
+            switchToLightMode();
         }
-
     });
 
-
-    // Scroll Down
-    nav_item.on("click", function() {
-        $("html, body").animate({
-            scrollTop: $("section#about_me").offset().top - 100
-        }, 100);
-    });
 
     // Scroll Between Sections
     let section_links = $(".nav_links  p");
@@ -139,11 +146,13 @@ $(document).ready(function () {
     //     });
     // });
 
+
+
     // Show More Projects By Click to PLus
     let hidden_cards = $(".hidden-card");
     let more_projects = $(".more_projects");
-    console.log(hidden_cards);
     more_projects.click(function () {
+        console.log("Hello Cards");
         hidden_cards.each(function() {
             $(this).removeClass("hidden-card");
         });

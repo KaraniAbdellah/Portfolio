@@ -1,30 +1,123 @@
-// see project of text typing animation ==> project 31
-// see project of https://www.youtube.com/watch?v=41G4JS5pJzs ==> project 32
+<section id="experience" class="page experience container_dektop container_phone">
+    <p class="title text-secondary">
+        <span>🛠️ Experience</span>
+    </p>
+    <main class="d-flex justify-content-between align-items-center">
+        <div class="expriences">
+            <div class="experience-item">
+                <h4 class="m-0 text-secondary">Freelance Web Developer</h4>
+                <p class="date_present fw-semibold my-1">January 2023 - Present</p>
+                <p class="info text-secondary">Built websites for personal projects and small businesses.
+                    Used HTML, CSS, JavaScript, and other front-end technologies.</p>
+            </div>
+            <div class="experience-item my-4">
+                <h4 class="m-0 text-secondary">Team Project Developer</h4>
+                <p class="date_present fw-semibold my-1">March 2023 - Present</p>
+                <p class="info text-secondary">Worked with friends on web development and programming projects. 
+                    Developed web applications and worked on collaborative coding projects.</p>
+            </div>
+            <div class="experience-item">
+                <h4 class="m-0 text-secondary">School Projects Contributor</h4>
+                <p class="date_present fw-semibold my-1">September 2022 - Present</p>
+                <p class="info text-secondary">Collaborated on various school-related technical projects.
+                    Participated in coding challenges and group problem-solving.</p>
+            </div>
+        </div>
+        
+        <!-- <div class="image">
+            <img src="images/me.png" alt="">
+        </div> -->
+    </main>
+</section>
 
-/////////////////////////////////////////////////////////////////////
-
-// choose a structure of your project
-/*
-    introdution [social links] [get in touchs]
-    About me [image & skills]
-    Experience []
-    Projects [icons for folder & git & see projects]
-    Resume [Open Resume Button]
-*/
-Inspering From: https://elazizi.com/
-/*
-    Dark Mode
-    Header With Shadow [line bellow each link word]
-    Use Imogies
-    Footer [Copyright © 2024| All rights reserved. && SomeLinks]
-*/
-
-/////////////////////////////////////////////////////////////////////
-
-// find a colors [rgb(33 39 55) & #64ffda]
-// see this man: https://merouanezouaid.github.io/kaitodev/#about && https://elazizi.com/
 
 
 
+section.experience main .expriences {
+    width: 60%;
+}
+section.experience main .image {
+    width: 30%;
+    border-radius: 20px;
+    transition: var(--transition);
+}
 
 
+
+    let All_text = $(".text-secondary");
+    let main_button = $(".main_button");
+    let nav_item = $(".nav_item");
+    let techs_li = $(".techs li");
+    let cards = $(".cards .card");
+    let btn_more_projects = $(".more_projects");
+    let name_input = $(".name_input");
+    let textarea_input = $(".textarea_input");
+    let exper_info = $(".experience-item .info");
+    let exper_cards = $(".experience-item"); 
+
+    if (window.localStorage.getItem("page_mode") == "dark") {
+        CommonChanges();
+        ToDark();
+    }
+    function CommonChanges() {
+        // Change The Experience Card
+        exper_cards.each(function() {
+            $(this).toggleClass("dark");
+            $(this).toggleClass("light");
+        });
+        // Change The Color Of Exprience Card
+        exper_info.each(function() {
+            $(this).toggleClass("light");
+            $(this).toggleClass("dark");
+        });
+        // Change the Theme for main_button
+        main_button.toggleClass("dark");
+        main_button.toggleClass("light");
+        // Change the Theme for Technology Card
+        techs_li.each(function() {
+            $(this).toggleClass("light");
+            $(this).toggleClass("dark");
+        });
+        // Change the Theme for Technology Card
+        cards.each(function() {
+            $(this).toggleClass("light");
+            $(this).toggleClass("dark");
+        });
+        // Change the Color more_projects button
+        btn_more_projects.toggleClass("light");
+        btn_more_projects.toggleClass("dark");
+        // Change The Input Background
+        name_input.toggleClass("light");
+        name_input.toggleClass("dark");
+        textarea_input.toggleClass("dark");
+        textarea_input.toggleClass("light");
+    }
+    function ToDark() {
+        // Change the icon to sun
+        ele_mode.html(`<i class="fa-solid fa-sun"></i>`);
+        // Change Text Color to White
+        All_text.each(function () {
+            $(this).removeClass("text-secondary");
+            $(this).css("color", "white");
+        });
+        // Change Body Color
+        $("body").css("background-color", "#212737");
+        // Change Body Class
+        $("body").removeClass("light");
+        // Change the Image Down
+        nav_item.html(`<img src="images/down-chevron.png" alt="scroll image">`);
+    }
+    function ToLight() {
+        // Change the icon to sun
+        ele_mode.html(`<i class="fa-solid fa-moon"></i>`);
+        // Change Text Color to White
+        All_text.each(function () {
+            $(this).addClass("text-secondary");
+        });
+        // Change Body Color
+        $("body").css("background-color", "white");
+        // Change Body Class
+        $("body").addClass("light");
+        // Change the Image Down
+        nav_item.html(`<img src="images/arrow-scroll.png" alt="scroll image">`);
+    }

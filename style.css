@@ -91,11 +91,11 @@ img {
 }
 @media (max-width: 767px) {
     .text-phone {
-        font-size: 18px !important;
+        font-size: 16px !important;
     }
 }
 .text-computer {
-    font-size: 20px !important;
+    font-size: 18px !important;
 }
 
 .title {
@@ -404,48 +404,62 @@ section.about_me ul.techs li img {
 /* Start Experience */
 section.experience {
     /* height: calc(100vh - 100px); */
+    
 }
 section.experience main .expriences {
-    width: 60%;
 }
-section.experience main .image {
-    width: 30%;
-    border-radius: 20px;
-    transition: var(--transition);
-
+section.experience .experience-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: var(--border-radius);
 }
-section.experience main .image img {
-    width: 350px;
-    border-radius: 20px;
-    transition: var(--transition);
-    box-shadow: var(--main-bgcolor-dark) -5px -5px 0px;
+section.experience main .experience-item.dark {
+    background-color: #29384f5c;
 }
-section.experience main .image:hover img {
-    box-shadow: var(--main-bgcolor-dark) -10px -10px 0px;
+section.experience main .experience-item.light {
+    background-color: #f5f5f5;
 }
-section.experience main .experience-item .date_present {
+section.experience .experience-item:not(:last-child) {margin-bottom: 10px;}
+section.experience .experience-item .image {width: 38%;}
+section.experience .experience-item .image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+section.experience .experience-item .info {width: 60%;}
+section.experience .experience-item .info .role {
+    font-size: 20px;
+    font-weight: bold;
     color: var(--main-color-light);
 }
-section.experience .experience-item .info {
-    font-size: 17px;
+section.experience .experience-item .info .date {
+    margin: 5px 0;
+    color: var(--grey);
+    font-weight: bold;
+    font-size: 18px;
+}
+section.experience .experience-item .info .desc span {
+    color: var(--main-color-light);
+}
+section.experience .experience-item .info.light {
+    color: white;
+}
+section.experience .experience-item .info.dark {
+    color: #444;
 }
 @media (max-width: 991px) {
-    section.experience main {
+    section.experience .experience-item {
         flex-direction: column;
     }
-    section.experience main .expriences {
-        width: 100%;
-        order: 2;
-    }
-    section.experience main .image {
-        order: 1;
+    section.experience .experience-item .image {
         width: 100%;
         margin-bottom: 10px;
-        margin-bottom: 40px;
     }
-    section.experience main .image img {
+    section.experience .experience-item .info {
         width: 100%;
     }
+
+    
 }
 /* End Experience */
 
