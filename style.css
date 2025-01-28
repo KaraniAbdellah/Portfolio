@@ -413,6 +413,10 @@ section.experience .experience-item {
     justify-content: space-between;
     padding: 10px;
     border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+section.experience .experience-item:hover {
+    background-color: #29384f14 !important;
 }
 section.experience main .experience-item.dark {
     background-color: #29384f5c;
@@ -472,6 +476,9 @@ section.projects .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+}
+section.projects .cards .card:hover {
+    background-color: #29384f14 !important;
 }
 @media (max-width: 992px) {
     section.projects .cards {
