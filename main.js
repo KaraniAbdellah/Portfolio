@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+    AOS.init();
     // Show Navbar
     let nav_icon = $(".navbar-icon");
     let nav_links = $(".nav_links");
@@ -111,6 +112,13 @@ $(document).ready(function () {
             window.localStorage.setItem("page_mode", "light");
             switchToLightMode();
         }
+    });
+
+    navItem.on("click", function () {
+        let section_id = `section#about_me`;
+        $("html, body").animate({
+            scrollTop: $(section_id).offset().top - 100
+        }, 100);
     });
 
 

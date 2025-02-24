@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- Style File -->
     <!-- <link rel="stylesheet" href="sass/page/main.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="src/bootstrap.css">
     <link rel="stylesheet" href="style.css">
 
@@ -41,7 +42,7 @@
         <!-- Start Introduction Section -->
         <section id="intro" class="page intro container_dektop container_phone">
             <main class="d-flex justify-content-between align-items-center">
-                <div class="main_info">
+                <div data-aos="fade-left" data-aos-duration="2000" class="main_info">
                     <p class="name fw-semibold my-2 text-secondary">Hello! I'm <span class="auto-type-name">Abdellah</span></p>
                     <div class="info">
                         <p class="text-computer text-phone text-secondary">I'm software engineer from Morocco 🇲🇦, currently in my third year of university 🎓 (Licence).
@@ -68,7 +69,7 @@
                         <a href="mailto:abdellahkarani@gmail.com" class="text-phone text-computer ms-2 fw-semibold text-secondary">Get in touch</a>
                     </button>
                 </div>
-                <div class="image">
+                <div data-aos="fade-right" data-aos-duration="2000" class="image">
                     <img src="images/me.jpeg" alt="">
                 </div>
             </main>
@@ -79,11 +80,11 @@
         <!-- Start About_me Section -->
         <section id="about_me" class="page about_me container_dektop container_phone">
             <p class="title text-secondary"><span>🧑‍💻 About me</span></p>
-            <p class="desc_about_me text-phone text-computer text-secondary">Hi! I'm Abdellah Karani, a student 
+            <p data-aos="zoom-in-right" class="desc_about_me text-phone text-computer text-secondary">Hi! I'm Abdellah Karani, a student 
                 studying computer science at university in Beni Mellal, Morocco.
                 <br> Currently I am working with this technologies:
             </p>
-            <ul class="techs p-0">
+            <ul data-aos="zoom-in-right" class="techs p-0">
                 <li class="light text-secondary d-flex justify-content-center align-items-center flex-column"> <img src="images/html.webp" alt=""><p>HTML5</p> </li>
                 <li class="light text-secondary d-flex justify-content-center align-items-center flex-column"> <img src="images/css.webp" alt=""><p>CSS3</p> </li>
                 <li class="light text-secondary d-flex justify-content-center align-items-center flex-column"> <img src="images/sass.webp" alt=""><p>Sass</p> </li>
@@ -102,7 +103,7 @@
             </p>
             <main class="d-flex justify-content-between align-items-center">
                 <div class="expriences">
-                    <div class="experience-item light">
+                    <div data-aos="zoom-in-right" class="experience-item light">
                         <div class="image">
                             <img src="experience_img/enaa.jpg" alt="">
                         </div>
@@ -117,7 +118,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="experience-item light">
+                    <div data-aos="zoom-in-right" class="experience-item light">
                         <div class="image">
                             <img src="experience_img/fpbm.webp" alt="">
                         </div>
@@ -143,7 +144,33 @@
                 <span>📂 Projects</span>
             </p>
             <div class="cards">
-                <div class="card light">
+                <div  data-aos="zoom-in" class="card light">
+                    <div class="git_projects d-flex justify-content-between align-items-center">
+                        <i class= "fa-solid fa-folder"></i>
+                        <div class="watch_project">
+                            <a class="text-secondary mx-1" href="https://github.com/KaraniAbdellah/stock_manager_react"><i class=" github fa-brands fa-github"></i></a>
+                            <a class="text-secondary"  href="https://github.com/KaraniAbdellah/stock_manager_react"><i class="link fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="card_images/task_manager.png" alt="">
+                    </div>
+                    <div class="info_project">
+                        <h4 class="name text-secondary">Task Manager</h4>
+                        <p class="text-secondary desc">
+                            A friendly application manager that helps you keep track of your tasks and 
+                            manage your projects efficiently. It includes features like task creation, 
+                            editing, and deletion, as well as project categorization and progress tracking.
+                        </p>
+                    </div>
+                    <div class="languages d-flex justify-content-start align-items-center">
+                        <button class="langauge yellow_btn">JavaScript</button>
+                        <button class="langauge green_btn">Sass</button>
+                        <button class="langauge blue_btn">HTML5</button>
+                        <button class="langauge red_btn">CSS3</button>
+                    </div>
+                </div>
+                <div  data-aos="zoom-in" class="card light">
                     <div class="git_projects d-flex justify-content-between align-items-center">
                         <i class= "fa-solid fa-folder"></i>
                         <div class="watch_project">
@@ -168,7 +195,7 @@
                         <button class="langauge red_btn">CSS3</button>
                     </div>
                 </div>
-                <div class="card light">
+                <div  data-aos="zoom-in" class="card light">
                     <div class="git_projects d-flex justify-content-between align-items-center">
                         <i class= "fa-solid fa-folder"></i>
                         <div class="watch_project">
@@ -192,7 +219,7 @@
                         <button class="langauge red_btn">CSS3</button>
                     </div>
                 </div>
-                <div class="card light">
+                <div  data-aos="zoom-in" class="card hidden-card light">
                     <div class="git_projects d-flex justify-content-between align-items-center">
                         <i class= "fa-solid fa-folder"></i>
                         <div class="watch_project">
@@ -213,7 +240,7 @@
                         <button class="langauge blue_btn">CSS3</button>
                     </div>
                 </div>
-                <div class="card hidden-card light">
+                <div  data-aos="zoom-in" class="card hidden-card light">
                     <div class="git_projects d-flex justify-content-between align-items-center">
                         <i class= "fa-solid fa-folder"></i>
                         <div class="watch_project">
@@ -238,7 +265,7 @@
                         <button class="langauge green_btn">Sass</button>
                     </div>
                 </div>
-                <div class="card hidden-card light">
+                <div  data-aos="zoom-in" class="card hidden-card light">
                     <div class="git_projects d-flex justify-content-between align-items-center">
                         <i class= "fa-solid fa-folder"></i>
                         <div class="watch_project">
@@ -258,7 +285,7 @@
                         <button class="langauge blue_btn">CSS3</button>
                     </div>
                 </div>
-                <div class="card hidden-card light">
+                <div  data-aos="zoom-in" class="card hidden-card light">
                     <div class="git_projects d-flex justify-content-between align-items-center">
                         <i class= "fa-solid fa-folder"></i>
                         <div class="watch_project">
@@ -292,7 +319,7 @@
                 <span>📍 Contact</span>
             </p>
             <main class="d-flex justify-content-between align-items-center">
-                <div class="resume">
+                <div class="resume" data-aos="flip-left">
                     <p class="fw-semibold text-secondary">let's <span class="auto-type-connect"></span></p>
                     <button onclick="window.open('resume/resume.pdf')" class="btn main_button light my-2">
                         <i class="fa-solid fa-file text-secondary"></i>
@@ -300,7 +327,7 @@
                     </button>
                 </div>
                 <!-- action="https://formspree.io/f/xzzzkegb" method="post" -->
-                <form action="https://formspree.io/f/xzzzkegb" method="post">
+                <form data-aos="flip-right" action="https://formspree.io/f/xzzzkegb" method="post">
                     <div class="mb-3">
                       <label for="name" class="form-label text-secondary">Your Name</label>
                       <input type="text" placeholder="name..." class="form-control name_input light" id="name" required>
@@ -317,7 +344,7 @@
         </section>
         <br><hr>
         <!-- Start Footer -->
-        <footer class="container_dektop container_phone d-flex justify-content-between align-items-center">
+        <footer data-aos="fade-up" class="container_dektop container_phone d-flex justify-content-between align-items-center">
             <p class="text-secondary">Copyright ©<span class="date">2025</span> | All rights reserved.</p>
             <div class="social-icons">
                 <a target="_blank" class="text-secondary" href="https://github.com/KaraniAbdellah">
@@ -333,6 +360,7 @@
         </footer>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="src/jquery-3.7.1.min.js"></script>
