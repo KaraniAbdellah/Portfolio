@@ -169,6 +169,9 @@ $(document).ready(function () {
 
     // Generate a Message for Submission
     let submit_btn = $(".submit_btn");
+    const textarea_input = $(".textarea_input");
+    const name_input = $(".name_input");
+    console.log(submit_btn);
     submit_btn.click(function () {
         if (name_input.val() != "" && textarea_input.val() != "") {
             submit_btn.text("Submitted");
