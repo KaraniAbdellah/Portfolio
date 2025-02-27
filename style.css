@@ -152,7 +152,7 @@ img {
     background-image: linear-gradient(to right, #e1e1e1 0%, #dadada  51%, #eaeaea  100%);
 }
 .auto-type-connect.dark {
-    background-image: linear-gradient(to right, #293453be 0%, #121e3cbe  51%, #050e28be  100%);
+    background-image: linear-gradient(to right, #08cd9f 0%, #006c53  51%, #00a47e  100%);
 }
 
 .typed-cursor {
@@ -322,7 +322,7 @@ section.intro .links .social_icons a:hover {
     cursor: pointer;
 }
 .nav_item img {
-    width: 50px;
+    width: 30px;
     animation-name: down;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -606,11 +606,19 @@ footer .social-icons a:hover {
     color: white !important;
 }
 .submit_btn {
-    background-color: var(--main-color-light) !important;
     border: 0 !important;
 }
-.submit_btn:hover {
-    background-color: #00d4a2ce !important;
+.submit_btn.light {
+    background-color: var(--main-color-light) !important;
+}
+.submit_btn.light:hover {
+    background-color: #00d4a2af !important;
+}
+.submit_btn.dark {
+    background-color: #334169e2 !important;
+}
+.submit_btn.dark:hover {
+    background-color: #3341697c !important;
 }
 
 /* End Contact */

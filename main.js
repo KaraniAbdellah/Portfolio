@@ -33,6 +33,7 @@ $(document).ready(function () {
     let experInfo = $(".experience-item .info");
     let experCards = $(".experience-item");
     let auto_type_connect = $("span.auto-type-connect");
+    let submit_button = $(".submit_btn");
 
     if (window.localStorage.getItem("page_mode") === "dark") {
         applyCommonChanges();
@@ -74,6 +75,7 @@ $(document).ready(function () {
 
     function switchToDarkMode() {
         auto_type_connect.removeClass("light").addClass("dark");
+        submit_button.removeClass("light").addClass("dark");
         // Change Icon to Sun
         eleMode.html(`<i class="fa-solid fa-sun"></i>`);
 
@@ -91,6 +93,7 @@ $(document).ready(function () {
 
     function switchToLightMode() {
         auto_type_connect.removeClass("dark").addClass("light");
+        submit_button.removeClass("dark").addClass("light");
         // Change Icon to Moon
         eleMode.html(`<i class="fa-solid fa-moon"></i>`);
 
