@@ -53,6 +53,7 @@ $(document).ready(function () {
         // Toggle Main Button Theme
         mainButton.toggleClass("light dark");
 
+
         // Toggle Technology List Items
         techsList.each(function () {
             $(this).toggleClass("light dark");
@@ -72,6 +73,8 @@ $(document).ready(function () {
     }
 
     function switchToDarkMode() {
+        auto_type_connect.toggleClass("light");
+        auto_type_connect.toggleClass("dark");
         // Change Icon to Sun
         eleMode.html(`<i class="fa-solid fa-sun"></i>`);
 
@@ -88,6 +91,8 @@ $(document).ready(function () {
     }
 
     function switchToLightMode() {
+        auto_type_connect.toggleClass("light");
+        auto_type_connect.toggleClass("dark");
         // Change Icon to Moon
         eleMode.html(`<i class="fa-solid fa-moon"></i>`);
 
@@ -105,15 +110,10 @@ $(document).ready(function () {
 
     eleMode.on("click", function () {
         applyCommonChanges();
-        
         if ($("body").hasClass("light")) {
-            auto_type_connect.addClass("light");
-            auto_type_connect.removeClass("dark");
             window.localStorage.setItem("page_mode", "dark");
             switchToDarkMode();
         } else {
-            auto_type_connect.addClass("dark");
-            auto_type_connect.removeClass("light");
             window.localStorage.setItem("page_mode", "light");
             switchToLightMode();
         }

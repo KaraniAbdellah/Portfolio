@@ -146,7 +146,7 @@ img {
 
 .auto-type-connect.light {
     color: white !important;
-    background-image: linear-gradient(to right, #dfdfdf 0%, #d3d3d3  51%, #dcdcdc  100%);
+    background-image: linear-gradient(to right, #d71414 0%, #d3d3d3  51%, #dcdcdc  100%);
     padding: 0 10px;
     border-radius: 10px;
 }
