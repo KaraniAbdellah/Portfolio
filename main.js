@@ -32,7 +32,7 @@ $(document).ready(function () {
     let textareaInput = $(".textarea_input");
     let experInfo = $(".experience-item .info");
     let experCards = $(".experience-item");
-    let auto_type_connect = $(".auto-type-connect");
+    let auto_type_connect = $("span.auto-type-connect");
 
     if (window.localStorage.getItem("page_mode") === "dark") {
         applyCommonChanges();
@@ -73,8 +73,7 @@ $(document).ready(function () {
     }
 
     function switchToDarkMode() {
-        auto_type_connect.toggleClass("light");
-        auto_type_connect.toggleClass("dark");
+        auto_type_connect.removeClass("light").addClass("dark");
         // Change Icon to Sun
         eleMode.html(`<i class="fa-solid fa-sun"></i>`);
 
@@ -91,8 +90,7 @@ $(document).ready(function () {
     }
 
     function switchToLightMode() {
-        auto_type_connect.toggleClass("light");
-        auto_type_connect.toggleClass("dark");
+        auto_type_connect.removeClass("dark").addClass("light");
         // Change Icon to Moon
         eleMode.html(`<i class="fa-solid fa-moon"></i>`);
 

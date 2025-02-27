@@ -143,14 +143,14 @@ img {
 .auto-type-name {
     color: var(--main-color-dark);  
 }
-
-.auto-type-connect.light {
-    color: white !important;
-    background-image: linear-gradient(to right, #d71414 0%, #d3d3d3  51%, #dcdcdc  100%);
+.auto-type-connect {
     padding: 0 10px;
     border-radius: 10px;
+    color: white !important;
 }
-
+.auto-type-connect.light {
+    background-image: linear-gradient(to right, #e1e1e1 0%, #dadada  51%, #eaeaea  100%);
+}
 .auto-type-connect.dark {
     background-image: linear-gradient(to right, #293453be 0%, #121e3cbe  51%, #050e28be  100%);
 }
