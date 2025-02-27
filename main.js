@@ -32,6 +32,7 @@ $(document).ready(function () {
     let textareaInput = $(".textarea_input");
     let experInfo = $(".experience-item .info");
     let experCards = $(".experience-item");
+    let auto_type_connect = $(".auto-type-connect");
 
     if (window.localStorage.getItem("page_mode") === "dark") {
         applyCommonChanges();
@@ -104,11 +105,15 @@ $(document).ready(function () {
 
     eleMode.on("click", function () {
         applyCommonChanges();
-
+        
         if ($("body").hasClass("light")) {
+            auto_type_connect.addClass("light");
+            auto_type_connect.removeClass("dark");
             window.localStorage.setItem("page_mode", "dark");
             switchToDarkMode();
         } else {
+            auto_type_connect.addClass("dark");
+            auto_type_connect.removeClass("light");
             window.localStorage.setItem("page_mode", "light");
             switchToLightMode();
         }
